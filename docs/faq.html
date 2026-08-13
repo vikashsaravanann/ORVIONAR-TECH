@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ – ORVIONAR TECH</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/chatbot.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    .faq-section { padding: 60px 0; }
+    .faq-container { max-width: 800px; margin: 0 auto; }
+    .faq-item { margin-bottom: 20px; border: 1px solid var(--gray-700); border-radius: 8px; overflow: hidden; }
+    .faq-question { 
+      background: var(--dark); 
+      color: var(--white);
+      padding: 20px; 
+      cursor: pointer; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .faq-question:hover { background: var(--gray-900); }
+    .faq-question.active { background: var(--orange); color: white; }
+    .faq-answer { 
+      padding: 20px; 
+      background: var(--black); 
+      display: none; 
+      line-height: 1.6;
+      color: var(--gray-300);
+    }
+    .faq-answer.active { display: block; }
+    .faq-icon { font-size: 20px; transition: transform 0.3s; }
+    .faq-icon.active { transform: rotate(180deg); }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><img src="assets/orvionar-logo.webp" alt="Orvionar Tech" class="logo-icon-img" style="height:120px;width:auto;object-fit:contain;background-color:white;border-radius:8px;padding:4px;"/></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle">Programs <i class="fa-solid fa-caret-down"></i></button>
+        <div class="nav-dropdown-menu">
+          <a href="domains.html">CSE / IT</a><a href="domains.html">ECE / EEE</a>
+          <a href="domains.html">Management / B.Com</a><a href="domains.html">Others</a>
+        </div>
+      </div>
+      <a href="about.html">About-Us</a><a href="careers.html">Careers</a>
+    </nav>
+    <a href="login.html" class="btn nav-cta">Login</a>
+    <button id="theme-toggle" class="btn-outline" title="Toggle theme" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a><a href="domains.html">Programs</a>
+  <a href="about.html">About-Us</a><a href="careers.html">Careers</a>
+  <a href="login.html" class="m-cta">Login</a>
+</div>
+
+<div style="background:var(--black);color:var(--white);padding:120px 20px 40px;text-align:center">
+  <h1 style="font-size:48px;margin-bottom:20px;text-transform:uppercase">Frequently Asked Questions</h1>
+  <p style="font-size:18px;color:var(--gray-300)">Find answers to common questions about our courses and services</p>
+</div>
+
+<section class="faq-section">
+  <div class="container faq-container">
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>What courses does Orvionar offer?</span>
+        <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-answer">
+        Orvionar offers comprehensive courses across multiple domains including CSE/IT, ECE/EEE, Management, and other technical fields. Our curriculum covers trending technologies like MERN Stack, Data Science, AI/ML, Cloud Computing, and more. Each course is designed with industry standards and real-world projects.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>How long are the courses?</span>
+        <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-answer">
+        Course duration varies based on the program. Most of our courses range from 3-6 months depending on the complexity and depth of content. Some specialized programs may take longer. You can find specific duration details on each course page.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>Do you provide certification?</span>
+        <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-answer">
+        Yes, we provide industry-recognized certificates upon course completion. Our certifications include Course Completion Certificate, Internship Certificate, and Certificate of Participation. These certificates are valued by employers and can enhance your career prospects.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>What is the teaching methodology?</span>
+        <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-answer">
+        We follow a blend of live sessions, recorded modules, hands-on projects, and doubt-clearing sessions. Our AI-powered LMS personalizes the learning experience for each student. We emphasize practical application through real-world projects and community learning.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>Are there prerequisites for courses?</span>
+        <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-answer">
+        Prerequisites vary by course. Some fundamental courses like "Introduction to Web Development" are beginner-friendly and require no prior experience. Advanced courses may require basic programming knowledge. Each course page clearly mentions the required prerequisites.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>Can I access course materials after completion?</span>
+        <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-answer">
+        Yes, depending on your plan. Pro plan members get lifetime access to course materials and updates. This allows you to revisit lessons and stay updated with the latest changes in technology and best practices.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>How do I enroll in a course?</span>
+        <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-answer">
+        Simply sign up on our platform, browse available courses, and select your preferred course and plan. You can enroll instantly and get access to all course materials. We support multiple payment methods for your convenience.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>Is there job placement assistance?</span>
+        <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-answer">
+        Yes, we provide personalized career guidance and help connect our graduates with industry opportunities. Our placement team works closely with leading companies to match qualified candidates with job openings aligned to their skills and interests.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>What if I need technical support?</span>
+        <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-answer">
+        Our dedicated support team is available to help. You can reach out via email, live chat, or our community forum. Response times vary based on your plan, with Pro members receiving priority support.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>Can I upgrade or downgrade my plan?</span>
+        <i class="fas fa-chevron-down faq-icon"></i>
+      </div>
+      <div class="faq-answer">
+        Yes, you can upgrade or downgrade your plan at any time. Changes will take effect at your next billing cycle. If you upgrade, you'll get access to additional features immediately.
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#1a1a1a;color:#fff;padding:40px 20px;text-align:center">
+  <p>&copy; 2024 Orvionar Tech. All rights reserved.</p>
+  <div style="margin-top:20px">
+    <a href="privacy.html" style="color:#667eea;margin:0 15px;text-decoration:none">Privacy Policy</a>
+    <a href="terms.html" style="color:#667eea;margin:0 15px;text-decoration:none">Terms & Conditions</a>
+    <a href="contact.html" style="color:#667eea;margin:0 15px;text-decoration:none">Contact Us</a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+function toggleFaq(element) {
+  const question = element;
+  const answer = element.nextElementSibling;
+  const icon = question.querySelector('.faq-icon');
+  
+  document.querySelectorAll('.faq-answer.active').forEach(item => {
+    if(item !== answer) item.classList.remove('active');
+  });
+  document.querySelectorAll('.faq-question.active').forEach(item => {
+    if(item !== question) {
+      item.classList.remove('active');
+      item.querySelector('.faq-icon').classList.remove('active');
+    }
+  });
+  
+  answer.classList.toggle('active');
+  question.classList.toggle('active');
+  icon.classList.toggle('active');
+}
+</script>
+</body>
+</html>

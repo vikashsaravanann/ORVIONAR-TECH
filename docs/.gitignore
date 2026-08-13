@@ -1,0 +1,36 @@
+# Node
+node_modules/
+
+# macOS
+.DS_Store
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Build
+dist/
+build/
+
+# Deployment
+deployment_docs.zip
+
+# Backups and temp
+assets/orig-*
+*.orig-*
+scratch/
+
+# Environment
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+
+# Other
+*.zip

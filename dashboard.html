@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STUDENT DASHBOARD – ORVIONAR TECH</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/chatbot.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- LOGGED-IN NAVBAR (black, matches screenshot exactly) -->
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><img src="assets/orvionar-logo.webp" alt="Orvionar Tech" class="logo-icon-img" style="height:120px;width:auto;object-fit:contain;background-color:white;border-radius:8px;padding:4px;"/></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle">Programs <i class="fa-solid fa-caret-down"></i></button>
+        <div class="nav-dropdown-menu">
+          <a href="domains.html">CSE / IT</a><a href="domains.html">ECE / EEE</a>
+          <a href="domains.html">Management / B.Com</a><a href="domains.html">Pharmacy</a>
+          <a href="domains.html">Agriculture</a><a href="domains.html">Others</a>
+        </div>
+      </div>
+      <a href="dashboard.html" class="nav-mylibrary">My-library</a>
+      <a href="about.html">About-Us</a>
+      <a href="careers.html">Careers</a>
+    </nav>
+    <a href="index.html" class="btn nav-logout" onclick="return confirm('Are you sure you want to logout?')">Logout</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a><a href="domains.html">Programs</a>
+  <a href="dashboard.html">My-library</a><a href="about.html">About-Us</a>
+  <a href="careers.html">Careers</a>
+  <a href="index.html" class="m-cta">Logout</a>
+</div>
+
+<!-- DASHBOARD CONTENT -->
+<div class="dashboard-page" style="padding-top:108px">
+  <div class="container">
+    <div class="dashboard-header">
+      <h1>STUDENT DASHBOARD</h1>
+      <p>Track All your Courses efficiently</p>
+    </div>
+    <div class="dashboard-cards">
+      <div class="dash-card">
+        <h3>ALL COURSES</h3>
+        <p>All Available courses</p>
+        <a href="domains.html" class="dash-link">Go to Courses →</a>
+      </div>
+      <div class="dash-card">
+        <h3>MY COURSES</h3>
+        <p>Your Subscribed Courses</p>
+        <a href="my-courses.html" class="dash-link">My Courses →</a>
+      </div>
+      <div class="dash-card">
+        <h3>MY PROFILE</h3>
+        <p>Your profile Section</p>
+        <a href="profile.html" class="dash-link">My Profile →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo"><img src="assets/orvionar-logo.webp" alt="Orvionar Tech" class="logo-icon-img" style="height:120px;width:auto;object-fit:contain;background-color:white;border-radius:8px;padding:4px;"/></a>
+      <p>Empowering individuals with cutting-edge skills to thrive in today's competitive world.</p>
+      <div class="social-links">
+        <a href="https://facebook.com/orvionar" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://twitter.com/orvionar" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://instagram.com/orvionar" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/orvionar-tech-private-limited/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul>
+      <li><a href="index.html">Home</a></li><li><a href="domains.html">Courses</a></li>
+      <li><a href="about.html">About Us</a></li><li><a href="careers.html">Careers</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact">
+      <li><i class="fa-solid fa-envelope"></i><a href="mailto:info@orvionar.in">info@orvionar.in</a></li>
+      <li><i class="fa-solid fa-phone"></i><a href="tel:+917483905485">+91 7483905485</a></li>
+      <li><i class="fa-solid fa-location-dot"></i>Orvionar Tech, H206, 36/5, Hustlehub Tech Park, HSR Layout, Bengaluru – 560102</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom"><div class="container footer-bottom-inner">
+    <p>© 2026 Orvionar. All rights reserved.</p>
+    <div class="footer-legal"><a href="faq.html">FAQ</a> | <a href="blog.html">Blog</a> | <a href="alumni.html">Alumni</a> | <a href="certificates.html">Certificates</a> | <a href="refund-policy.html">Refund Policy</a> | <a href="terms.html">Terms &amp; Conditions</a> | <a href="privacy.html">Privacy Policy</a><a href="https://wa.me/917483905485" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></div>
+  </div></div>
+</footer>
+<a href="https://wa.me/917483905485" class="whatsapp-fab" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+<script src="js/main.js"></script>
+</body>
+</html>

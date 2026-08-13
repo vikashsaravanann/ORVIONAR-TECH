@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Environment variables & secrets
+.env
+*.env
+server/.env
+
+# Python Virtual Environments & Cache
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.pyc
+
+# Temporary python scripts
+*.py
+
+# System & OS Files
+.DS_Store
+Thumbs.db
+
+# Archives & Temporary files
+*.zip
+scratch/
+EOF

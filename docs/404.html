@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>404 - Page Not Found – ORVIONAR TECH</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/chatbot.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    .error-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 70vh;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .error-code {
+      font-size: 120px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 0;
+    }
+    .error-title {
+      font-size: 36px;
+      font-weight: 700;
+      color: #222;
+      margin: 20px 0 10px;
+    }
+    .error-message {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 30px;
+      max-width: 500px;
+    }
+    .error-icon {
+      font-size: 80px;
+      color: #667eea;
+      margin-bottom: 20px;
+    }
+    .error-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 15px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s, box-shadow 0.3s;
+      margin: 10px;
+    }
+    .error-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    }
+    .error-button.secondary {
+      background: white;
+      color: #667eea;
+      border: 2px solid #667eea;
+    }
+    .error-button.secondary:hover {
+      background: var(--black);
+    }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><img src="assets/orvionar-logo.webp" alt="Orvionar Tech" class="logo-icon-img" style="height:120px;width:auto;object-fit:contain;background-color:white;border-radius:8px;padding:4px;"/></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle">Programs <i class="fa-solid fa-caret-down"></i></button>
+        <div class="nav-dropdown-menu">
+          <a href="domains.html">CSE / IT</a><a href="domains.html">ECE / EEE</a>
+          <a href="domains.html">Management / B.Com</a><a href="domains.html">Others</a>
+        </div>
+      </div>
+      <a href="about.html">About-Us</a><a href="careers.html">Careers</a>
+    </nav>
+    <a href="login.html" class="btn nav-cta">Login</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a><a href="domains.html">Programs</a>
+  <a href="about.html">About-Us</a><a href="careers.html">Careers</a>
+  <a href="login.html" class="m-cta">Login</a>
+</div>
+
+<div class="error-container">
+  <div class="error-icon">
+    <i class="fas fa-exclamation-triangle"></i>
+  </div>
+  <h1 class="error-code">404</h1>
+  <h2 class="error-title">Page Not Found</h2>
+  <p class="error-message">
+    Sorry! The page you are looking for doesn't exist. It may have been moved, deleted, or the URL might be incorrect.
+  </p>
+  <div>
+    <a href="index.html" class="error-button">
+      <i class="fas fa-home"></i> Go Home
+    </a>
+    <a href="courses.html" class="error-button secondary">
+      <i class="fas fa-book"></i> Browse Courses
+    </a>
+  </div>
+  <div style="margin-top: 40px; font-size: 16px; color: #666;">
+    <p>Need help? <a href="contact.html" style="color: #667eea; text-decoration: none; font-weight: 600;">Contact our support team</a></p>
+  </div>
+</div>
+
+<footer style="background:#1a1a1a;color:#fff;padding:40px 20px;text-align:center;margin-top:60px">
+  <p>&copy; 2024 Orvionar Tech. All rights reserved.</p>
+  <div style="margin-top:20px">
+    <a href="privacy.html" style="color:#667eea;margin:0 15px;text-decoration:none">Privacy Policy</a>
+    <a href="terms.html" style="color:#667eea;margin:0 15px;text-decoration:none">Terms & Conditions</a>
+    <a href="contact.html" style="color:#667eea;margin:0 15px;text-decoration:none">Contact Us</a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

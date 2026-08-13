@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ADMIN USER ACCESS – ORVIONAR TECH</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/chatbot.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><img src="assets/orvionar-logo.webp" alt="Orvionar Tech" class="logo-icon-img" style="height:120px;width:auto;object-fit:contain;background-color:white;border-radius:8px;padding:4px;"/></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a><a href="domains.html">Programs</a>
+      <a href="about.html">About-Us</a><a href="careers.html">Careers</a>
+    </nav>
+    <a href="login.html" class="btn nav-cta">My-library</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a><a href="domains.html">Programs</a>
+  <a href="about.html">About-Us</a><a href="careers.html">Careers</a>
+  <a href="login.html" class="m-cta">My-library</a>
+</div>
+
+<div style="background:var(--black);height:68px"></div>
+
+<div class="legal-page">
+  <main class="page-main">
+    <div class="auth-page" style="min-height: 70vh; display: flex; align-items: center; justify-content: center;">
+      <div class="auth-card" style="width: 100%; max-width: 400px; padding: 40px; background: var(--black); border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+        <div class="auth-logo" style="text-align: center; margin-bottom: 20px;">
+          <a href="index.html" class="logo" style="justify-content:center">
+            <img src="assets/orvionar-logo.webp" alt="Orvionar Tech" class="logo-icon-img" style="height:120px;width:auto;object-fit:contain;background-color:white;border-radius:8px;padding:4px;"/>
+          </a>
+        </div>
+        <h2 style="text-align: center; font-size: 1.5rem; font-weight: 800; color: #111; margin-bottom: 8px;">ADMIN ACCESS</h2>
+        <p class="auth-sub" style="text-align: center; color: #666; margin-bottom: 30px; font-size: 0.9rem;">Please login to the administration portal</p>
+        
+        <form action="dashboard.html" method="GET" class="auth-form" style="display: flex; flex-direction: column; gap: 16px;">
+          <div class="input-group" style="display: flex; flex-direction: column; gap: 6px;">
+            <label style="font-size: 0.85rem; font-weight: 600; color: #333;">Admin Username</label>
+            <input type="text" placeholder="Enter admin username" required style="padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;"/>
+          </div>
+          <div class="input-group" style="display: flex; flex-direction: column; gap: 6px;">
+            <label style="font-size: 0.85rem; font-weight: 600; color: #333;">Security Key</label>
+            <input type="password" placeholder="Enter security key" required style="padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;"/>
+          </div>
+          <button type="submit" class="btn" style="width: 100%; padding: 14px; background: var(--orange); color: #fff; border: none; border-radius: 8px; font-weight: 600; font-size: 1rem; cursor: pointer; margin-top: 10px;">Login to Portal</button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo"><img src="assets/orvionar-logo.webp" alt="Orvionar Tech" class="logo-icon-img" style="height:120px;width:auto;object-fit:contain;background-color:white;border-radius:8px;padding:4px;"/></a>
+      <p>Empowering individuals with cutting-edge skills to thrive in today's competitive world.</p>
+      <div class="social-links">
+        <a href="https://facebook.com/orvionar" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://twitter.com/orvionar" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://instagram.com/orvionar" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/orvionar-tech-private-limited/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul>
+      <li><a href="index.html">Home</a></li><li><a href="domains.html">Courses</a></li>
+      <li><a href="about.html">About Us</a></li><li><a href="careers.html">Careers</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact">
+      <li><i class="fa-solid fa-envelope"></i><a href="mailto:info@orvionar.in">info@orvionar.in</a></li>
+      <li><i class="fa-solid fa-phone"></i><a href="tel:+917483905485">+91 7483905485</a></li>
+      <li><i class="fa-solid fa-location-dot"></i>Orvionar Tech, H206, 36/5, Hustlehub Tech Park, HSR Layout, Bengaluru – 560102</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom"><div class="container footer-bottom-inner">
+    <p>© 2026 Orvionar. All rights reserved.</p>
+    <div class="footer-legal"><a href="faq.html">FAQ</a> | <a href="blog.html">Blog</a> | <a href="alumni.html">Alumni</a> | <a href="certificates.html">Certificates</a> | <a href="refund-policy.html">Refund Policy</a> | <a href="terms.html">Terms &amp; Conditions</a> | <a href="privacy.html">Privacy Policy</a><a href="https://wa.me/917483905485" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></div>
+  </div></div>
+</footer>
+<a href="https://wa.me/917483905485" class="whatsapp-fab" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+<script src="js/main.js"></script>
+</body>
+</html>

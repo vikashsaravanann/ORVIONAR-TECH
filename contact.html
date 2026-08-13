@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CONTACT US – ORVIONAR TECH</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/chatbot.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><img src="assets/orvionar-logo.webp" alt="Orvionar Tech" class="logo-icon-img" style="height:120px;width:auto;object-fit:contain;background-color:white;border-radius:8px;padding:4px;"/></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle">Programs <i class="fa-solid fa-caret-down"></i></button>
+        <div class="nav-dropdown-menu">
+          <a href="domains.html?tab=cse">CSE / IT</a><a href="domains.html?tab=ece">ECE / EEE</a>
+          <a href="domains.html?tab=management">Management / B.Com</a><a href="domains.html?tab=pharmacy">Pharmacy</a>
+          <a href="domains.html?tab=agriculture">Agriculture</a><a href="domains.html?tab=others">Others</a>
+        </div>
+      </div>
+      <a href="about.html">About-Us</a><a href="careers.html">Careers</a>
+    </nav>
+    <a href="login.html" class="btn nav-cta">My-library</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a><a href="domains.html">Programs</a>
+  <a href="about.html">About-Us</a><a href="careers.html">Careers</a>
+  <a href="contact.html">Contact</a><a href="login.html" class="m-cta">My-library</a>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-badge"><span>📬 Get In Touch</span></div>
+    <h1>Contact <span class="gradient-text">Us</span></h1>
+    <p>We'd love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to reach out.</p>
+  </div>
+</section>
+
+<section class="section" style="background:#f9fafb">
+  <div class="container">
+    <div class="contact-grid">
+      <!-- INFO -->
+      <div class="contact-info">
+        <h2>LET'S TALK</h2>
+        <p>Reach out to us through any of the channels below. Our team is available Monday–Saturday, 9am–7pm IST.</p>
+        <div class="info-item">
+          <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div><h4>Our Office</h4><p>Orvionar Tech, H206, 36/5, Hustlehub Tech Park, Somasundarapalya Main Rd, Adjacent 27th Main Rd, ITI Layout, Sector 2, Haralukunte Village, HSR Layout, Bengaluru – 560102</p></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div><h4>Email Us</h4><a href="mailto:info@orvionar.in">info@orvionar.in</a></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+          <div><h4>Call Us</h4><a href="tel:+917483905485">+91 7483905485</a></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon" style="background:var(--black)7ed"><i class="fa-solid fa-clock" style="color:#f97316"></i></div>
+          <div><h4>Working Hours</h4><p>Monday – Saturday: 9:00 AM – 7:00 PM IST</p></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fa-brands fa-whatsapp"></i></div>
+          <div><h4>WhatsApp</h4><a href="https://wa.me/917483905485" target="_blank">Chat on WhatsApp</a></div>
+        </div>
+        <!-- Social -->
+        <div style="margin-top:28px">
+          <h4 style="margin-bottom:12px;font-size:0.9rem;font-weight:700;color:#374151">Follow Us</h4>
+          <div class="social-links" style="justify-content:flex-start">
+            <a href="https://facebook.com/orvionar" target="_blank" style="background:rgba(255,255,255,0.1);color:var(--white)"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/orvionar" target="_blank" style="background:rgba(255,255,255,0.1);color:var(--white)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://instagram.com/orvionar" target="_blank" style="background:rgba(255,255,255,0.1);color:var(--white)"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/orvionar-tech-private-limited/" target="_blank" style="background:rgba(255,255,255,0.1);color:var(--white)"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- FORM -->
+      <div class="contact-form-card">
+        <h3>SEND US A MESSAGE</h3>
+        <div class="success-msg" data-fs-success>✅ Message sent! We'll get back to you shortly.</div>
+        <div data-fs-error style="color:#ef4444; margin-bottom:12px; font-weight: 500;"></div>
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" name="name" placeholder="Your full name" data-fs-field required/>
+              <span data-fs-error="name" style="color:#ef4444; font-size: 0.8rem; display:block; margin-top:4px;"></span>
+            </div>
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" name="email" placeholder="your@email.com" data-fs-field required/>
+              <span data-fs-error="email" style="color:#ef4444; font-size: 0.8rem; display:block; margin-top:4px;"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Subject *</label>
+            <input type="text" name="subject" placeholder="How can we help?" data-fs-field required/>
+            <span data-fs-error="subject" style="color:#ef4444; font-size: 0.8rem; display:block; margin-top:4px;"></span>
+          </div>
+          <div class="form-group">
+            <label>Message *</label>
+            <textarea name="message" placeholder="Write your message here..." data-fs-field required></textarea>
+            <span data-fs-error="message" style="color:#ef4444; font-size: 0.8rem; display:block; margin-top:4px;"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%" data-fs-submit-btn>Send Message <i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+        <script>
+          window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+          formspree('initForm', { formElement: '#contactForm', formId: 'mkjwbylj' });
+        </script>
+        <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+      </div>
+    </div>
+
+    <!-- MAP -->
+    <div class="map-container">
+      <h3>OUR LOCATION</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5530553537!2d77.6368!3d12.9170!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1329fca6b91b%3A0x2e4c63db40a4c272!2sHustlehub%20Tech%20Park!5e0!3m2!1sen!2sin!4v1710000000000" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo"><img src="assets/orvionar-logo.webp" alt="Orvionar Tech" class="logo-icon-img" style="height:120px;width:auto;object-fit:contain;background-color:white;border-radius:8px;padding:4px;"/></a>
+      <p>Empowering individuals with cutting-edge skills to thrive in today's competitive world.</p>
+      <div class="social-links">
+        <a href="https://facebook.com/orvionar" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://twitter.com/orvionar" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://instagram.com/orvionar" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/orvionar-tech-private-limited/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul>
+      <li><a href="index.html">Home</a></li><li><a href="domains.html">Courses</a></li>
+      <li><a href="about.html">About Us</a></li><li><a href="careers.html">Careers</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact">
+      <li><i class="fa-solid fa-envelope"></i><a href="mailto:support@orvionar.in">support@orvionar.in</a></li>
+      <li><i class="fa-solid fa-phone"></i><a href="tel:+917483905485">+91 7483905485</a></li>
+      <li><i class="fa-solid fa-location-dot"></i>Orvionar Tech, H206, 36/5, Hustlehub Tech Park, HSR Layout, Bengaluru – 560102</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom"><div class="container footer-bottom-inner">
+    <p>© 2026 Orvionar. All rights reserved.</p>
+    <div class="footer-legal"><a href="faq.html">FAQ</a> | <a href="blog.html">Blog</a> | <a href="alumni.html">Alumni</a> | <a href="certificates.html">Certificates</a> | <a href="refund-policy.html">Refund Policy</a> | <a href="terms.html">Terms &amp; Conditions</a> | <a href="privacy.html">Privacy Policy</a><a href="https://wa.me/917483905485" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></div>
+  </div></div>
+</footer>
+<a href="https://wa.me/917483905485" class="whatsapp-fab" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+<button id="back-to-top" aria-label="Back to top" style="position:fixed;bottom:92px;right:28px;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#f97316,#f43f5e);color:white;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;box-shadow:0 4px 16px rgba(249,115,22,0.4);opacity:0;transform:translateY(20px);transition:opacity 0.3s ease,transform 0.3s ease;z-index:998"><i class="fa-solid fa-chevron-up"></i></button>
+<button id="chatbot-trigger" aria-label="Chat with Orvi AI" style="position:fixed;bottom:28px;right:92px;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#f97316,#f43f5e);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(249,115,22,0.45);z-index:997"><i class="fa-solid fa-comment-dots" style="color:white;font-size:1.4rem"></i></button>
+<div id="chatbot-window"><div class="chatbot-header"><div class="chatbot-avatar"><i class="fa-solid fa-headset" style="color:white; font-size: 1.2rem;"></i></div><div class="chatbot-header-info"><strong>ORVIONAR AI</strong><br><span style="margin-top:2px;display:inline-block;">Orvionar Tech Support</span></div><button class="chatbot-close" id="chatbot-close"><i class="fa-solid fa-xmark"></i></button></div><div class="chatbot-messages" id="chatbot-messages"></div><div class="chatbot-input-area"><input type="text" id="chatbot-input" placeholder="Ask me anything..." autocomplete="off"/><button id="chatbot-send"><i class="fa-solid fa-paper-plane"></i></button></div></div>
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>

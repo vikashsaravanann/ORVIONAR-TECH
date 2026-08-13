@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ALUMNI & TESTIMONIALS – ORVIONAR TECH</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/chatbot.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    .alumni-section { padding: 60px 20px; }
+    .alumni-header { text-align: center; margin-bottom: 60px; }
+    .alumni-header h1 { font-size: 48px; margin-bottom: 20px; }
+    .alumni-header p { font-size: 18px; color: #666; }
+    .alumni-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+      gap: 30px; 
+      max-width: 1200px; 
+      margin: 0 auto;
+    }
+    .alumni-card { 
+      background: white; 
+      border-radius: 12px; 
+      overflow: hidden; 
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 30px 20px;
+      transition: transform 0.3s;
+    }
+    .alumni-card:hover { transform: translateY(-5px); }
+    .alumni-avatar { 
+      width: 120px; 
+      height: 120px; 
+      margin: 0 auto 20px; 
+      border-radius: 50%; 
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 50px;
+      color: white;
+    }
+    .alumni-name { 
+      font-size: 20px; 
+      font-weight: 700; 
+      margin-bottom: 5px;
+      color: #222;
+    }
+    .alumni-role { 
+      color: #667eea; 
+      font-weight: 600; 
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    .alumni-company { 
+      color: #999; 
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+    .alumni-quote { 
+      color: #666; 
+      font-style: italic; 
+      line-height: 1.6;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+    .alumni-rating { 
+      color: #ffc107;
+      margin-bottom: 10px;
+    }
+    .stats-container { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+      gap: 30px; 
+      max-width: 1000px; 
+      margin: 0 auto 60px;
+      text-align: center;
+    }
+    .stat-box h3 { font-size: 36px; color: #667eea; font-weight: 700; }
+    .stat-box p { color: #666; font-size: 16px; }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><img src="assets/orvionar-logo.webp" alt="Orvionar Tech" class="logo-icon-img" style="height:120px;width:auto;object-fit:contain;background-color:white;border-radius:8px;padding:4px;"/></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle">Programs <i class="fa-solid fa-caret-down"></i></button>
+        <div class="nav-dropdown-menu">
+          <a href="domains.html">CSE / IT</a><a href="domains.html">ECE / EEE</a>
+          <a href="domains.html">Management / B.Com</a><a href="domains.html">Others</a>
+        </div>
+      </div>
+      <a href="about.html">About-Us</a><a href="careers.html">Careers</a>
+    </nav>
+    <a href="login.html" class="btn nav-cta">Login</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a><a href="domains.html">Programs</a>
+  <a href="about.html">About-Us</a><a href="careers.html">Careers</a>
+  <a href="login.html" class="m-cta">Login</a>
+</div>
+
+<div style="background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);color:white;padding:80px 20px;text-align:center">
+  <h1 style="font-size:48px;margin-bottom:20px">Our Alumni Success Stories</h1>
+  <p style="font-size:18px;opacity:0.9">Meet our graduates who achieved their career goals</p>
+</div>
+
+<section class="alumni-section">
+  <div class="stats-container">
+    <div class="stat-box">
+      <h3>5000+</h3>
+      <p>Successful Graduates</p>
+    </div>
+    <div class="stat-box">
+      <h3>95%</h3>
+      <p>Placement Rate</p>
+    </div>
+    <div class="stat-box">
+      <h3>500+</h3>
+      <p>Partner Companies</p>
+    </div>
+    <div class="stat-box">
+      <h3>4.8/5</h3>
+      <p>Average Rating</p>
+    </div>
+  </div>
+
+  <div class="alumni-grid">
+    <div class="alumni-card">
+      <div class="alumni-avatar">👨‍💻</div>
+      <div class="alumni-name">Sayed Ahmed</div>
+      <div class="alumni-role">Senior Frontend Developer</div>
+      <div class="alumni-company">Google • Mountain View</div>
+      <div class="alumni-rating">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      </div>
+      <div class="alumni-quote">"Orvionar's MERN Stack course provided me with industry-ready skills. The hands-on projects and mentoring helped me land my dream job at Google!"</div>
+    </div>
+
+    <div class="alumni-card">
+      <div class="alumni-avatar">👩‍💼</div>
+      <div class="alumni-name">Kavya Maguluri</div>
+      <div class="alumni-role">Data Scientist</div>
+      <div class="alumni-company">Microsoft • Bangalore</div>
+      <div class="alumni-rating">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      </div>
+      <div class="alumni-quote">"The Data Science course at Orvionar is comprehensive and practical. I learned cutting-edge techniques that directly helped me succeed in my role at Microsoft."</div>
+    </div>
+
+    <div class="alumni-card">
+      <div class="alumni-avatar">👨‍🎓</div>
+      <div class="alumni-name">Rahul Singh</div>
+      <div class="alumni-role">Full Stack Developer</div>
+      <div class="alumni-company">Amazon • Hyderabad</div>
+      <div class="alumni-rating">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      </div>
+      <div class="alumni-quote">"Coming from a non-tech background, I was nervous. But the supportive community and personalized mentoring made my transition smooth. Now I'm thriving at Amazon!"</div>
+    </div>
+
+    <div class="alumni-card">
+      <div class="alumni-avatar">👩‍💻</div>
+      <div class="alumni-name">Priya Sharma</div>
+      <div class="alumni-role">AI/ML Engineer</div>
+      <div class="alumni-company">Meta • San Francisco</div>
+      <div class="alumni-rating">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      </div>
+      <div class="alumni-quote">"The AI and Machine Learning specialization equipped me with advanced knowledge. The lifetime access to updates keeps me current with latest trends."</div>
+    </div>
+
+    <div class="alumni-card">
+      <div class="alumni-avatar">👨‍💼</div>
+      <div class="alumni-name">Arjun Patel</div>
+      <div class="alumni-role">Cloud Architect</div>
+      <div class="alumni-company">AWS • Mumbai</div>
+      <div class="alumni-rating">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      </div>
+      <div class="alumni-quote">"The Cloud Computing course gave me a strong foundation. The practical labs and real-world scenarios prepared me perfectly for my role as a Cloud Architect."</div>
+    </div>
+
+    <div class="alumni-card">
+      <div class="alumni-avatar">👩‍🔬</div>
+      <div class="alumni-name">Neha Gupta</div>
+      <div class="alumni-role">QA Automation Engineer</div>
+      <div class="alumni-company">Apple • Bangalore</div>
+      <div class="alumni-rating">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      </div>
+      <div class="alumni-quote">"Quality Assurance training at Orvionar is top-notch. The curriculum covers all aspects of testing and automation. It's an investment that paid off!"</div>
+    </div>
+
+    <div class="alumni-card">
+      <div class="alumni-avatar">👨‍💻</div>
+      <div class="alumni-name">Vikram Kumar</div>
+      <div class="alumni-role">DevOps Engineer</div>
+      <div class="alumni-company">Netflix • Bangalore</div>
+      <div class="alumni-rating">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      </div>
+      <div class="alumni-quote">"The DevOps course connected me with industry experts. The networking opportunities and career guidance were invaluable in landing this role at Netflix."</div>
+    </div>
+
+    <div class="alumni-card">
+      <div class="alumni-avatar">👩‍💼</div>
+      <div class="alumni-name">Sneha Desai</div>
+      <div class="alumni-role">Cybersecurity Analyst</div>
+      <div class="alumni-company">IBM • Delhi</div>
+      <div class="alumni-rating">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      </div>
+      <div class="alumni-quote">"Security is critical in today's world. Orvionar's cybersecurity program taught me practical skills that are immediately applicable in my role at IBM."</div>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#1a1a1a;color:#fff;padding:40px 20px;text-align:center">
+  <p>&copy; 2024 Orvionar Tech. All rights reserved.</p>
+  <div style="margin-top:20px">
+    <a href="privacy.html" style="color:#667eea;margin:0 15px;text-decoration:none">Privacy Policy</a>
+    <a href="terms.html" style="color:#667eea;margin:0 15px;text-decoration:none">Terms & Conditions</a>
+    <a href="contact.html" style="color:#667eea;margin:0 15px;text-decoration:none">Contact Us</a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

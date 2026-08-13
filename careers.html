@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CAREERS – ORVIONAR TECH</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/chatbot.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><img src="assets/orvionar-logo.webp" alt="Orvionar Tech" class="logo-icon-img" style="height:120px;width:auto;object-fit:contain;background-color:white;border-radius:8px;padding:4px;"/></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle">Programs <i class="fa-solid fa-caret-down"></i></button>
+        <div class="nav-dropdown-menu">
+          <a href="domains.html?tab=cse">CSE / IT</a><a href="domains.html?tab=ece">ECE / EEE</a>
+          <a href="domains.html?tab=management">Management / B.Com</a><a href="domains.html?tab=pharmacy">Pharmacy</a>
+          <a href="domains.html?tab=agriculture">Agriculture</a><a href="domains.html?tab=others">Others</a>
+        </div>
+      </div>
+      <a href="about.html">About-Us</a><a href="careers.html" class="active">Careers</a>
+    </nav>
+    <a href="login.html" class="btn nav-cta">My-library</a>
+    <button id="theme-toggle" class="btn-outline" title="Toggle theme" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a><a href="domains.html">Programs</a>
+  <a href="about.html">About-Us</a><a href="careers.html">Careers</a>
+  <a href="contact.html">Contact</a><a href="login.html" class="m-cta">My-library</a>
+</div>
+
+<section class="careers-hero">
+  <div class="container">
+    <div class="hero-badge"><span>💼 Work With Us</span></div>
+    <h1>Join Our <span class="gradient-text">Team</span></h1>
+    <p>Be part of our mission to transform education. Explore exciting career opportunities and make a difference with us!</p>
+  </div>
+</section>
+
+<!-- OPEN POSITIONS -->
+<section class="section" style="background:#f9fafb">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Now Hiring</p>
+      <h2 class="section-title">OPEN POSITIONS</h2>
+    </div>
+    <div class="jobs-grid">
+      <div class="job-card">
+        <div class="job-info">
+          <h3>ONLINE INSTRUCTOR – WEB DEVELOPMENT</h3>
+          <div class="job-tags"><span class="job-tag">Remote</span><span class="job-tag">Full-time</span><span class="job-tag">Education</span></div>
+          <p style="margin-top:12px">Join our team to teach web development courses, including HTML, CSS, and JavaScript. Create engaging content and mentor students to build real-world projects.</p>
+        </div>
+        <a href="#talent" class="btn btn-primary" style="white-space:nowrap;flex-shrink:0">Apply Now</a>
+      </div>
+      <div class="job-card">
+        <div class="job-info">
+          <h3>CONTENT DEVELOPER – DATA SCIENCE</h3>
+          <div class="job-tags"><span class="job-tag">Remote</span><span class="job-tag">Full-time</span><span class="job-tag">Content</span></div>
+          <p style="margin-top:12px">Develop high-quality data science course materials, including tutorials, quizzes, and assignments. Collaborate with instructors to ensure content accuracy.</p>
+        </div>
+        <a href="#talent" class="btn btn-primary" style="white-space:nowrap;flex-shrink:0">Apply Now</a>
+      </div>
+      <div class="job-card">
+        <div class="job-info">
+          <h3>STUDENT SUCCESS MANAGER</h3>
+          <div class="job-tags"><span class="job-tag">Hybrid</span><span class="job-tag">Full-time</span><span class="job-tag">Student Support</span></div>
+          <p style="margin-top:12px">Support students throughout their learning journey, providing guidance, answering queries, and ensuring a positive educational experience.</p>
+        </div>
+        <a href="#talent" class="btn btn-primary" style="white-space:nowrap;flex-shrink:0">Apply Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TALENT POOL -->
+<section class="section talent-pool" id="talent">
+  <div class="container">
+    <div class="talent-form-card">
+      <h2>JOIN OUR TALENT POOL</h2>
+      <p>Not seeing the right role? Submit your details to stay connected for future opportunities.</p>
+      <div class="success-msg" id="talentSuccess">✅ Application submitted! We'll be in touch.</div>
+      <form id="talentForm">
+        <div class="form-row">
+          <div class="form-group"><label>Full Name *</label><input type="text" placeholder="Your full name" required/></div>
+          <div class="form-group"><label>Email Address *</label><input type="email" placeholder="your@email.com" required/></div>
+        </div>
+        <div class="form-group">
+          <label>Upload Resume</label>
+          <label class="file-input-label"><i class="fa-solid fa-paperclip"></i> Click to attach your resume (PDF/DOC)<input type="file" accept=".pdf,.doc,.docx"/></label>
+        </div>
+        <div class="form-group"><label>Message</label><textarea placeholder="Tell us about yourself and the role you're interested in..."></textarea></div>
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%">Submit Application <i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo"><img src="assets/orvionar-logo.webp" alt="Orvionar Tech" class="logo-icon-img" style="height:120px;width:auto;object-fit:contain;background-color:white;border-radius:8px;padding:4px;"/></a>
+      <p>Empowering individuals with cutting-edge skills to thrive in today's competitive world.</p>
+      <div class="social-links">
+        <a href="https://facebook.com/orvionar" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://twitter.com/orvionar" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://instagram.com/orvionar" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/orvionar-tech-private-limited/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul>
+      <li><a href="index.html">Home</a></li><li><a href="domains.html">Courses</a></li>
+      <li><a href="about.html">About Us</a></li><li><a href="careers.html">Careers</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact">
+      <li><i class="fa-solid fa-envelope"></i><a href="mailto:info@orvionar.in">info@orvionar.in</a></li>
+      <li><i class="fa-solid fa-phone"></i><a href="tel:+917483905485">+91 7483905485</a></li>
+      <li><i class="fa-solid fa-location-dot"></i>Orvionar Tech, H206, 36/5, Hustlehub Tech Park, HSR Layout, Bengaluru – 560102</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom"><div class="container footer-bottom-inner">
+    <p>© 2026 Orvionar. All rights reserved.</p>
+    <div class="footer-legal"><a href="faq.html">FAQ</a> | <a href="blog.html">Blog</a> | <a href="alumni.html">Alumni</a> | <a href="certificates.html">Certificates</a> | <a href="refund-policy.html">Refund Policy</a> | <a href="terms.html">Terms &amp; Conditions</a> | <a href="privacy.html">Privacy Policy</a><a href="https://wa.me/917483905485" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></div>
+  </div></div>
+</footer>
+<a href="https://wa.me/917483905485" class="whatsapp-fab" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+<button id="back-to-top" aria-label="Back to top" style="position:fixed;bottom:92px;right:28px;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#f97316,#f43f5e);color:white;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;box-shadow:0 4px 16px rgba(249,115,22,0.4);opacity:0;transform:translateY(20px);transition:opacity 0.3s ease,transform 0.3s ease;z-index:998"><i class="fa-solid fa-chevron-up"></i></button>
+<button id="chatbot-trigger" aria-label="Chat with Orvi AI" style="position:fixed;bottom:28px;right:92px;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#f97316,#f43f5e);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(249,115,22,0.45);z-index:997"><i class="fa-solid fa-comment-dots" style="color:white;font-size:1.4rem"></i></button>
+<div id="chatbot-window"><div class="chatbot-header"><div class="chatbot-avatar"><i class="fa-solid fa-headset" style="color:white; font-size: 1.2rem;"></i></div><div class="chatbot-header-info"><strong>ORVIONAR AI</strong><br><span style="margin-top:2px;display:inline-block;">Orvionar Tech Support</span></div><button class="chatbot-close" id="chatbot-close"><i class="fa-solid fa-xmark"></i></button></div><div class="chatbot-messages" id="chatbot-messages"></div><div class="chatbot-input-area"><input type="text" id="chatbot-input" placeholder="Ask me anything..." autocomplete="off"/><button id="chatbot-send"><i class="fa-solid fa-paper-plane"></i></button></div></div>
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>

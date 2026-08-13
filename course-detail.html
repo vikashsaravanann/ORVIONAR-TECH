@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>COURSE DETAIL – ORVIONAR TECH</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/chatbot.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    /* Hero split layout */
+    .hero-split {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-content { text-align: left; }
+    .hero-img { width: 100%; }
+    .hero-img-inner {
+      width: 100%;
+      min-height: 320px;
+      border-radius: 16px;
+      background-size: cover;
+      background-position: center;
+      background-color: var(--dark);
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+    /* Blurred ambient glow behind course image */
+    .hero-img-inner::before {
+      content: "";
+      position: absolute; inset: -30px;
+      background-image: inherit;
+      background-size: cover;
+      background-position: center;
+      filter: blur(40px);
+      opacity: 0.45;
+      z-index: 0;
+    }
+    .hero-img-inner::after {
+      content: "";
+      position: absolute; inset: 0;
+      background-image: inherit;
+      background-size: cover; /* changed from contain */
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 1;
+    }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 24px; }
+    @media (max-width: 900px) {
+      .hero-split { grid-template-columns: 1fr; gap: 24px; }
+      .hero-img { order: -1; margin-bottom: -16px; }
+      .hero-content { text-align: center; }
+      .hero-actions { justify-content: center; margin-top: 16px; }
+    }
+  </style>
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><img src="assets/orvionar-logo.webp" alt="Orvionar Tech" class="logo-icon-img" style="height:120px;width:auto;object-fit:contain;background-color:white;border-radius:8px;padding:4px;"/></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle">Programs <i class="fa-solid fa-caret-down"></i></button>
+        <div class="nav-dropdown-menu">
+          <a href="domains.html">CSE / IT</a><a href="domains.html">ECE / EEE</a>
+          <a href="domains.html">Management / B.Com</a><a href="domains.html">Others</a>
+        </div>
+      </div>
+      <a href="about.html">About-Us</a><a href="careers.html">Careers</a>
+    </nav>
+    <a href="login.html" class="btn nav-cta">My-library</a>
+    <button id="theme-toggle" class="btn-outline" title="Toggle theme" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a><a href="domains.html">Programs</a>
+  <a href="about.html">About-Us</a><a href="careers.html">Careers</a>
+  <a href="login.html" class="m-cta">My-library</a>
+</div>
+
+<!-- COURSE HERO -->
+<section class="page-hero" style="padding-top: 180px;">
+  <div class="container hero-split">
+    <div class="hero-content">
+      <div style="margin-bottom:12px;font-size:0.9rem;font-weight:700;color:var(--orange);letter-spacing:1px;text-transform:uppercase" id="courseDomain"></div>
+      <h1 id="courseTitle">Loading...</h1>
+      <p class="hero-desc" id="courseDesc"></p>
+
+      <!-- Tags -->
+      <div id="courseTags" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;"></div>
+
+      <div style="margin-bottom:20px;display:flex;align-items:center;gap:12px">
+        <i class="fa-regular fa-clock" style="color:var(--orange)"></i>
+        <strong id="courseDuration"></strong>
+      </div>
+
+      <div class="hero-actions">
+        <a href="login.html" class="btn btn-primary btn-lg">Enroll Now</a>
+        <a href="https://wa.me/917483905485" target="_blank" class="btn btn-outline-white btn-lg"><i class="fa-brands fa-whatsapp"></i> Contact Us</a>
+      </div>
+    </div>
+
+    <div class="hero-img">
+      <div class="hero-img-inner" id="courseThumb"></div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSE OVERVIEW -->
+<section class="section overview-section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:24px;">
+      <div class="overview-box" style="background:var(--dark);padding:24px;border-radius:12px;border:1px solid var(--gray-700)">
+        <h3 style="color:var(--orange);margin-bottom:12px;font-size:1.1rem;"><i class="fa-solid fa-code"></i> Skills Covered</h3>
+        <ul id="courseSkills" style="list-style:none;padding:0;color:var(--gray-300);"></ul>
+      </div>
+      <div class="overview-box" style="background:var(--dark);padding:24px;border-radius:12px;border:1px solid var(--gray-700)">
+        <h3 style="color:var(--orange);margin-bottom:12px;font-size:1.1rem;"><i class="fa-solid fa-wrench"></i> Tools & Technologies</h3>
+        <ul id="courseTools" style="list-style:none;padding:0;color:var(--gray-300);"></ul>
+      </div>
+      <div class="overview-box" style="background:var(--dark);padding:24px;border-radius:12px;border:1px solid var(--gray-700)">
+        <h3 style="color:var(--orange);margin-bottom:12px;font-size:1.1rem;"><i class="fa-solid fa-list-check"></i> Prerequisites</h3>
+        <ul id="coursePrereqs" style="list-style:none;padding:0;color:var(--gray-300);"></ul>
+      </div>
+      <div class="overview-box" style="background:var(--dark);padding:24px;border-radius:12px;border:1px solid var(--gray-700)">
+        <h3 style="color:var(--orange);margin-bottom:12px;font-size:1.1rem;"><i class="fa-solid fa-briefcase"></i> Career Outcomes</h3>
+        <ul id="courseOutcomes" style="list-style:none;padding:0;color:var(--gray-300);"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM ACCORDION -->
+<section class="section curriculum-section" style="background:var(--black)">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Syllabus</p>
+      <h2 class="section-title">COURSE CURRICULUM</h2>
+    </div>
+    <div id="curriculumAccordion" style="max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:12px;">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Real World Application</p>
+      <h2 class="section-title">PROJECTS</h2>
+    </div>
+    <div id="projectsGrid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:24px;">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATES TABS -->
+<section class="section" style="background:var(--black)">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Proof of Skills</p>
+      <h2 class="section-title">SAMPLE CERTIFICATES</h2>
+    </div>
+    <div style="max-width:900px;margin:0 auto">
+      <div id="certTabs" style="display:flex;gap:12px;margin-bottom:24px;flex-wrap:wrap;justify-content:center;">
+        <!-- Tabs generated by JS -->
+      </div>
+      <div id="certImages" style="text-align:center;">
+        <!-- Images generated by JS -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING PLANS -->
+<section class="section" style="background:var(--black)">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Pricing</p>
+      <h2 class="section-title">CHOOSE YOUR PLAN</h2>
+    </div>
+    <div id="pricingGrid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:24px;max-width:1000px;margin:0 auto;">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section why-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Why Orvionar</p>
+      <h2 class="section-title">WHY CHOOSE US?</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-icon"><i class="fa-solid fa-video"></i></div><h4>Live Interactive Session</h4><p>Learn concepts, practice questions & get your doubts cleared instantly in the LIVE classes.</p></div>
+      <div class="why-card"><div class="why-icon"><i class="fa-solid fa-briefcase"></i></div><h4>Career-Defining Projects</h4><p>Gain practical skills through real job scenarios.</p></div>
+      <div class="why-card"><div class="why-icon"><i class="fa-solid fa-laptop-code"></i></div><h4>Learning Activities</h4><p>Practice chapter-wise Quizzes & solve Assignments to learn and revise concepts.</p></div>
+      <div class="why-card"><div class="why-icon"><i class="fa-solid fa-comments"></i></div><h4>Doubt Buster Session</h4><p>Get access to 24/7 Live Discussion group with batchmates & Faculties.</p></div>
+      <div class="why-card"><div class="why-icon"><i class="fa-solid fa-users"></i></div><h4>Community Access</h4><p>Join a network of learners and professionals.</p></div>
+      <div class="why-card"><div class="why-icon"><i class="fa-solid fa-robot"></i></div><h4>AI-Enhanced LMS</h4><p>Personalized learning experience with AI-driven insights.</p></div>
+      <div class="why-card"><div class="why-icon"><i class="fa-solid fa-medal"></i></div><h4>Industry-Recognized Certification</h4><p>Earn a certificate that showcases your skills and knowledge.</p></div>
+      <div class="why-card"><div class="why-icon"><i class="fa-solid fa-handshake-angle"></i></div><h4>Dedicated Career Support</h4><p>Get personalized career guidance and job placement assistance.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQS -->
+<section class="section faq-section" style="background:var(--black)">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Got Questions?</p>
+      <h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
+    </div>
+    <div id="faqList" style="max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:15px">
+      <!-- FAQs go here -->
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="container cta-inner">
+    <h2>READY TO START LEARNING?</h2>
+    <p>Enroll today and take the first step toward your new career.</p>
+    <div class="cta-btns">
+      <a href="login.html" class="btn btn-white btn-lg">Enroll Now</a>
+      <a href="https://wa.me/917483905485" target="_blank" class="btn btn-outline-white btn-lg"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo"><img src="assets/orvionar-logo.webp" alt="Orvionar Tech" class="logo-icon-img" style="height:120px;width:auto;object-fit:contain;background-color:white;border-radius:8px;padding:4px;"/></a>
+      <p>Empowering individuals with cutting-edge skills to thrive in today's competitive world.</p>
+      <div class="social-links">
+        <a href="https://facebook.com/orvionar" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://twitter.com/orvionar" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://instagram.com/orvionar" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/orvionar-tech-private-limited/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul>
+      <li><a href="index.html">Home</a></li><li><a href="domains.html">Courses</a></li>
+      <li><a href="about.html">About Us</a></li><li><a href="careers.html">Careers</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact">
+      <li><i class="fa-solid fa-envelope"></i><a href="mailto:info@orvionar.in">info@orvionar.in</a></li>
+      <li><i class="fa-solid fa-phone"></i><a href="tel:+917483905485">+91 7483905485</a></li>
+      <li><i class="fa-solid fa-location-dot"></i>Orvionar Tech, H206, 36/5, Hustlehub Tech Park, HSR Layout, Bengaluru – 560102</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom"><div class="container footer-bottom-inner">
+    <p>© 2026 Orvionar. All rights reserved.</p>
+    <div class="footer-legal"><a href="faq.html">FAQ</a> | <a href="blog.html">Blog</a> | <a href="alumni.html">Alumni</a> | <a href="certificates.html">Certificates</a> | <a href="refund-policy.html">Refund Policy</a> | <a href="terms.html">Terms &amp; Conditions</a> | <a href="privacy.html">Privacy Policy</a><a href="https://wa.me/917483905485" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></div>
+  </div></div>
+</footer>
+<a href="https://wa.me/917483905485" class="whatsapp-fab" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+
+<script src="js/main.js"></script>
+<script src="js/course-data.js"></script>
+</body>
+</html>

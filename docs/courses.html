@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Orvionar | All Courses</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/chatbot.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><img src="assets/orvionar-logo.webp" alt="Orvionar Tech" class="logo-icon-img" style="height:120px;width:auto;object-fit:contain;background-color:white;border-radius:8px;padding:4px;"/></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle">Programs <i class="fa-solid fa-caret-down"></i></button>
+        <div class="nav-dropdown-menu">
+          <a href="#cse">CSE / IT</a><a href="#ece">ECE / EEE</a>
+          <a href="#mech">MECH</a><a href="#civil">CIVIL</a>
+          <a href="#management">Management / B.Com</a><a href="#pharmacy">Pharmacy</a>
+          <a href="#agriculture">Agriculture</a><a href="#others">Others</a>
+        </div>
+      </div>
+      <a href="about.html">About-Us</a><a href="careers.html">Careers</a>
+    </nav>
+    <a href="login.html" class="btn nav-cta">My-library</a>
+    <button id="theme-toggle" class="btn-outline" title="Toggle theme" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a><a href="domains.html">Programs</a>
+  <a href="about.html">About-Us</a><a href="careers.html">Careers</a>
+  <a href="contact.html">Contact</a><a href="login.html" class="m-cta">My-library</a>
+</div>
+
+<!-- DOMAINS HERO -->
+<section class="domains-hero">
+  <div class="container">
+    <div class="hero-badge"><span>📚 All Programs</span></div>
+    <h1>Explore <span class="gradient-text">All Courses</span></h1>
+    <p style="color:rgba(255,255,255,0.65);font-size:1rem;margin-top:10px">Choose your branch and find courses designed for your career path.</p>
+  </div>
+</section>
+
+<!-- TABS -->
+<div class="domain-tabs">
+  <div class="container tabs-inner">
+    <button class="tab-btn active" data-tab="cse">CSE/IT</button>
+    <button class="tab-btn" data-tab="ece">ECE/EEE</button>
+    <button class="tab-btn" data-tab="mech">MECH</button>
+    <button class="tab-btn" data-tab="civil">CIVIL</button>
+    <button class="tab-btn" data-tab="management">Management/B.Com</button>
+    <button class="tab-btn" data-tab="pharmacy">PHARMACY</button>
+    <button class="tab-btn" data-tab="agriculture">AGRICULTURE</button>
+    <button class="tab-btn" data-tab="others">OTHERS</button>
+  </div>
+</div>
+
+<!-- CSE/IT -->
+<section class="section domain-section active" id="cse">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">CSE / IT</p>
+      <h2 class="section-title">COMPUTER SCIENCE &AMP; IT COURSES</h2>
+    </div>
+    <div class="all-courses-grid">
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/mern+Stack.webp')"></div><div class="course-body"><span class="course-tag">Full Stack</span><h3>MERN STACK</h3><p>Build full-stack web apps using MongoDB, Express.js, React & Node.js. Covers APIs, authentication and deployment.</p><a href="course-detail.html?course=mern" class="btn btn-sm btn-primary">Know More →</a></div></div>
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/data+science.webp')"></div><div class="course-body"><span class="course-tag">Data</span><h3>DATA SCIENCE &AMP; ANALYTICS</h3><p>Collect, analyze and interpret data to extract meaningful insights and support decision-making.</p><a href="course-detail.html?course=data-science" class="btn btn-sm btn-primary">Know More →</a></div></div>
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/gen+AI.webp')"></div><div class="course-body"><span class="course-tag">AI</span><h3>GEN-AI &AMP; PROMPT ENGINEERING</h3><p>Generative AI systems that create new content — text, images, audio or code. Learn to prompt effectively.</p><a href="course-detail.html?course=gen-ai" class="btn btn-sm btn-primary">Know More →</a></div></div>
+      <div class="course-card"><div class="course-img" style="background-image:url('https://raw.githubusercontent.com/Madhan4512/Orvionar/refs/heads/main/Full%20Stack%20Web%20Development.png')"></div><div class="course-body"><span class="course-tag">Full Stack</span><h3>FULL STACK WEB DEVELOPMENT</h3><p>Build dynamic, scalable web apps combining frontend and backend technologies including HTML, CSS, JS and more.</p><a href="course-detail.html?course=fullstack" class="btn btn-sm btn-primary">Know More →</a></div></div>
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/dot+net.webp')"></div><div class="course-body"><span class="course-tag">Full Stack</span><h3>.NET FULL STACK</h3><p>Build complete web applications using Microsoft's .NET framework with Angular or React frontend.</p><a href="course-detail.html?course=dotnet" class="btn btn-sm btn-primary">Know More →</a></div></div>
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/AI.webp')"></div><div class="course-body"><span class="course-tag">AI</span><h3>ARTIFICIAL INTELLIGENCE</h3><p>Explore AI fundamentals — intelligent agents, problem-solving, machine learning and NLP applications.</p><a href="course-detail.html?course=ai" class="btn btn-sm btn-primary">Know More →</a></div></div>
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/machine+learning.webp')"></div><div class="course-body"><span class="course-tag">ML</span><h3>MACHINE LEARNING</h3><p>Master Python, data preprocessing, supervised & unsupervised learning, model evaluation and deployment.</p><a href="course-detail.html?course=ml" class="btn btn-sm btn-primary">Know More →</a></div></div>
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/azure.webp')"></div><div class="course-body"><span class="course-tag">Cloud</span><h3>AZURE CLOUD COMPUTING</h3><p>Azure services, networking, compute, storage, security and DevOps to design and deploy cloud solutions.</p><a href="course-detail.html?course=azure" class="btn btn-sm btn-primary">Know More →</a></div></div>
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/cyber+security.webp')"></div><div class="course-body"><span class="course-tag">Security</span><h3>CYBER SECURITY</h3><p>Protect systems from cyber threats, master cryptography, ethical hacking, web application security.</p><a href="course-detail.html?course=cybersecurity" class="btn btn-sm btn-primary">Know More →</a></div></div>
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/QA+testing.webp')"></div><div class="course-body"><span class="course-tag">Testing</span><h3>QA TESTING &AMP; AUTOMATION</h3><p>Manual & automated testing with Selenium, TestNG, Postman and JMeter. Covers API and performance testing.</p><a href="course-detail.html?course=qa" class="btn btn-sm btn-primary">Know More →</a></div></div>
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/power+bi.webp')"></div><div class="course-body"><span class="course-tag">Data Viz</span><h3>POWER BI FOR DATA VISUALIZATION</h3><p>Power BI Desktop, data connections, DAX, advanced visualizations and dashboards for business intelligence.</p><a href="course-detail.html?course=powerbi" class="btn btn-sm btn-primary">Know More →</a></div></div>
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/dsa.webp')"></div><div class="course-body"><span class="course-tag">DSA</span><h3>DATA STRUCTURES &AMP; ALGORITHMS</h3><p>Arrays, linked lists, trees, graphs, sorting, searching and dynamic programming for coding excellence.</p><a href="course-detail.html?course=dsa" class="btn btn-sm btn-primary">Know More →</a></div></div>
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/android.webp')"></div><div class="course-body"><span class="course-tag">Mobile</span><h3>ANDROID DEVELOPMENT</h3><p>Build modern Android apps — Android Studio, UI design, activities, data storage, networking & notifications.</p><a href="course-detail.html?course=android" class="btn btn-sm btn-primary">Know More →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ECE/EEE -->
+<section class="section domain-section" id="ece">
+  <div class="container">
+    <div class="section-header"><p class="section-eyebrow">ECE / EEE</p><h2 class="section-title">ELECTRONICS &AMP; ELECTRICAL COURSES</h2></div>
+    <div class="all-courses-grid">
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/AI.webp')"></div><div class="course-body"><span class="course-tag">AI</span><h3>ARTIFICIAL INTELLIGENCE</h3><p>Fundamentals of AI and its applications in embedded systems and electronics engineering.</p><a href="course-detail.html?course=ai" class="btn btn-sm btn-primary">Know More →</a></div></div>
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/machine+learning.webp')"></div><div class="course-body"><span class="course-tag">ML</span><h3>MACHINE LEARNING</h3><p>Apply ML techniques to signal processing, image recognition and control systems.</p><a href="course-detail.html?course=ml" class="btn btn-sm btn-primary">Know More →</a></div></div>
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/azure.webp')"></div><div class="course-body"><span class="course-tag">Cloud</span><h3>AZURE CLOUD COMPUTING</h3><p>Leverage Azure IoT and cloud services for smart embedded and electrical projects.</p><a href="course-detail.html?course=azure" class="btn btn-sm btn-primary">Know More →</a></div></div>
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/data+science.webp')"></div><div class="course-body"><span class="course-tag">Data</span><h3>DATA SCIENCE &AMP; ANALYTICS</h3><p>Data analytics for ECE/EEE professionals — process sensor data and draw insights.</p><a href="course-detail.html?course=data-science" class="btn btn-sm btn-primary">Know More →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MECH -->
+<section class="section domain-section" id="mech">
+  <div class="container">
+    <div class="section-header"><p class="section-eyebrow">Mechanical Engineering</p><h2 class="section-title">MECH COURSES</h2></div>
+    <div class="all-courses-grid">
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/data+science.webp')"></div><div class="course-body"><span class="course-tag">Data</span><h3>DATA SCIENCE FOR MECH</h3><p>Apply data analytics to manufacturing, quality control and predictive maintenance.</p><a href="course-detail.html?course=data-science" class="btn btn-sm btn-primary">Know More →</a></div></div>
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/AI.webp')"></div><div class="course-body"><span class="course-tag">AI</span><h3>AI FOR MANUFACTURING</h3><p>Leverage AI for smart manufacturing, automation and Industry 4.0 applications.</p><a href="course-detail.html?course=ai" class="btn btn-sm btn-primary">Know More →</a></div></div>
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/azure.webp')"></div><div class="course-body"><span class="course-tag">Cloud</span><h3>CLOUD FOR MECH</h3><p>Use cloud platforms for simulation, collaboration and project management.</p><a href="course-detail.html?course=azure" class="btn btn-sm btn-primary">Know More →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CIVIL -->
+<section class="section domain-section" id="civil">
+  <div class="container">
+    <div class="section-header"><p class="section-eyebrow">Civil Engineering</p><h2 class="section-title">CIVIL COURSES</h2></div>
+    <div class="all-courses-grid">
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/data+science.webp')"></div><div class="course-body"><span class="course-tag">Data</span><h3>DATA ANALYTICS FOR CIVIL</h3><p>Use data science tools for structural analysis, project planning and cost estimation.</p><a href="course-detail.html?course=data-science" class="btn btn-sm btn-primary">Know More →</a></div></div>
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/power+bi.webp')"></div><div class="course-body"><span class="course-tag">Data Viz</span><h3>POWER BI FOR CIVIL</h3><p>Create dashboards for project tracking, budgeting and construction management.</p><a href="course-detail.html?course=powerbi" class="btn btn-sm btn-primary">Know More →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MANAGEMENT -->
+<section class="section domain-section" id="management">
+  <div class="container">
+    <div class="section-header"><p class="section-eyebrow">Management / B.Com</p><h2 class="section-title">BUSINESS &AMP; MANAGEMENT COURSES</h2></div>
+    <div class="all-courses-grid">
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/data+science.webp')"></div><div class="course-body"><span class="course-tag">Data</span><h3>DATA SCIENCE &AMP; ANALYTICS</h3><p>Business analytics for managers — reporting, decision-making and market research insights.</p><a href="course-detail.html?course=data-science" class="btn btn-sm btn-primary">Know More →</a></div></div>
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/power+bi.webp')"></div><div class="course-body"><span class="course-tag">BI</span><h3>POWER BI FOR BUSINESS</h3><p>Build executive dashboards, financial reports and KPI trackers using Power BI.</p><a href="course-detail.html?course=powerbi" class="btn btn-sm btn-primary">Know More →</a></div></div>
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/gen+AI.webp')"></div><div class="course-body"><span class="course-tag">AI</span><h3>GEN-AI FOR BUSINESS</h3><p>Use generative AI tools for marketing, content, productivity and business strategy.</p><a href="course-detail.html?course=gen-ai" class="btn btn-sm btn-primary">Know More →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PHARMACY -->
+<section class="section domain-section" id="pharmacy">
+  <div class="container">
+    <div class="section-header"><p class="section-eyebrow">Pharmacy</p><h2 class="section-title">PHARMACY COURSES</h2></div>
+    <div class="all-courses-grid">
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/data+science.webp')"></div><div class="course-body"><span class="course-tag">Data</span><h3>CLINICAL DATA ANALYTICS</h3><p>Analyse clinical trial data, patient outcomes and drug efficacy using modern data science tools.</p><a href="course-detail.html?course=data-science" class="btn btn-sm btn-primary">Know More →</a></div></div>
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/AI.webp')"></div><div class="course-body"><span class="course-tag">AI</span><h3>AI IN HEALTHCARE</h3><p>Leverage AI for drug discovery, medical imaging analysis and patient management systems.</p><a href="course-detail.html?course=ai" class="btn btn-sm btn-primary">Know More →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- AGRICULTURE -->
+<section class="section domain-section" id="agriculture">
+  <div class="container">
+    <div class="section-header"><p class="section-eyebrow">Agriculture</p><h2 class="section-title">AGRICULTURE COURSES</h2></div>
+    <div class="all-courses-grid">
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/data+science.webp')"></div><div class="course-body"><span class="course-tag">Data</span><h3>AGRI DATA ANALYTICS</h3><p>Use data science for crop yield prediction, soil analysis and supply chain optimisation.</p><a href="course-detail.html?course=data-science" class="btn btn-sm btn-primary">Know More →</a></div></div>
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/AI.webp')"></div><div class="course-body"><span class="course-tag">AI</span><h3>AI IN AGRICULTURE</h3><p>Smart farming using AI — precision agriculture, pest detection and climate analysis.</p><a href="course-detail.html?course=ai" class="btn btn-sm btn-primary">Know More →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- OTHERS -->
+<section class="section domain-section" id="others">
+  <div class="container">
+    <div class="section-header"><p class="section-eyebrow">Others</p><h2 class="section-title">OTHER COURSES</h2></div>
+    <div class="all-courses-grid">
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/gen+AI.webp')"></div><div class="course-body"><span class="course-tag">AI</span><h3>GEN-AI &AMP; PROMPT ENGINEERING</h3><p>For everyone — learn to use generative AI tools effectively in any domain or profession.</p><a href="course-detail.html?course=gen-ai" class="btn btn-sm btn-primary">Know More →</a></div></div>
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/cyber+security.webp')"></div><div class="course-body"><span class="course-tag">Security</span><h3>CYBER SECURITY ESSENTIALS</h3><p>For non-tech professionals — understand cyber threats and best practices to stay safe online.</p><a href="course-detail.html?course=cybersecurity" class="btn btn-sm btn-primary">Know More →</a></div></div>
+      <div class="course-card"><div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/power+bi.webp')"></div><div class="course-body"><span class="course-tag">Data Viz</span><h3>POWER BI</h3><p>Data visualisation for any professional — build dashboards and present insights effectively.</p><a href="course-detail.html?course=powerbi" class="btn btn-sm btn-primary">Know More →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo"><img src="assets/orvionar-logo.webp" alt="Orvionar Tech" class="logo-icon-img" style="height:120px;width:auto;object-fit:contain;background-color:white;border-radius:8px;padding:4px;"/></a>
+      <p>Empowering individuals with cutting-edge skills to thrive in today's competitive world.</p>
+      <div class="social-links">
+        <a href="https://facebook.com/orvionar" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://twitter.com/orvionar" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://instagram.com/orvionar" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/orvionar-tech-private-limited/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul>
+      <li><a href="index.html">Home</a></li><li><a href="domains.html">Courses</a></li>
+      <li><a href="about.html">About Us</a></li><li><a href="careers.html">Careers</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact">
+      <li><i class="fa-solid fa-envelope"></i><a href="mailto:info@orvionar.in">info@orvionar.in</a></li>
+      <li><i class="fa-solid fa-phone"></i><a href="tel:+917483905485">+91 7483905485</a></li>
+      <li><i class="fa-solid fa-location-dot"></i>Orvionar Tech, H206, 36/5, Hustlehub Tech Park, HSR Layout, Bengaluru – 560102</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom"><div class="container footer-bottom-inner">
+    <p>© 2026 Orvionar. All rights reserved.</p>
+    <div class="footer-legal"><a href="faq.html">FAQ</a> | <a href="blog.html">Blog</a> | <a href="alumni.html">Alumni</a> | <a href="certificates.html">Certificates</a> | <a href="refund-policy.html">Refund Policy</a> | <a href="terms.html">Terms &amp; Conditions</a> | <a href="privacy.html">Privacy Policy</a><a href="https://wa.me/917483905485" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></div>
+  </div></div>
+</footer>
+<a href="https://wa.me/917483905485" class="whatsapp-fab" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+<button id="back-to-top" aria-label="Back to top" style="position:fixed;bottom:92px;right:28px;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#f97316,#f43f5e);color:white;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;box-shadow:0 4px 16px rgba(249,115,22,0.4);opacity:0;transform:translateY(20px);transition:opacity 0.3s ease,transform 0.3s ease;z-index:998"><i class="fa-solid fa-chevron-up"></i></button>
+<button id="chatbot-trigger" aria-label="Chat with Orvi AI" style="position:fixed;bottom:28px;right:92px;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#f97316,#f43f5e);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(249,115,22,0.45);z-index:997"><i class="fa-solid fa-comment-dots" style="color:white;font-size:1.4rem"></i></button>
+<div id="chatbot-window"><div class="chatbot-header"><div class="chatbot-avatar"><i class="fa-solid fa-headset" style="color:white; font-size: 1.2rem;"></i></div><div class="chatbot-header-info"><strong>ORVIONAR AI</strong><br><span style="margin-top:2px;display:inline-block;">Orvionar Tech Support</span></div><button class="chatbot-close" id="chatbot-close"><i class="fa-solid fa-xmark"></i></button></div><div class="chatbot-messages" id="chatbot-messages"></div><div class="chatbot-input-area"><input type="text" id="chatbot-input" placeholder="Ask me anything..." autocomplete="off"/><button id="chatbot-send"><i class="fa-solid fa-paper-plane"></i></button></div></div>
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>

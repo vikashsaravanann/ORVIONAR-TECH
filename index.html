@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ORVIONAR TECH – LEARN SMARTER. GROW FASTER. GET HIRED.</title>
+  <meta name="description" content="Orvionar Tech — AI-powered career programs, expert mentors & real-world outcomes. Trusted by thousands across India."/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/chatbot.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- PAGE LOADER – Professional cinematic intro -->
+<div id="page-loader">
+  <div class="loader-mark">
+    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+      <circle class="loader-ring-bg" cx="40" cy="40" r="34"/>
+      <circle class="loader-ring" cx="40" cy="40" r="34"/>
+    </svg>
+    <div class="loader-inner-dot"><span></span></div>
+  </div>
+  <div class="loader-brand">
+    <span class="loader-orvi">ORVI</span><span class="loader-onar">ONAR</span>
+  </div>
+  <div class="loader-tagline">Accelerate the future</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+</div>
+
+<!-- SCROLL PROGRESS -->
+<div id="scroll-progress"></div>
+
+<!-- CUSTOM CURSOR -->
+<div id="custom-cursor"></div>
+<div id="custom-cursor-dot"></div>
+
+<!-- PARTICLES -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- NAVBAR -->
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <img src="assets/orvionar-logo.webp" alt="Orvionar Tech" class="logo-icon-img" style="height:120px;width:auto;object-fit:contain;background-color:white;border-radius:8px;padding:4px;"/>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle">Programs <i class="fa-solid fa-caret-down"></i></button>
+        <div class="nav-dropdown-menu">
+          <a href="domains.html?tab=cse">CSE / IT</a>
+          <a href="domains.html?tab=ece">ECE / EEE</a>
+          <a href="domains.html?tab=management">Management / B.Com</a>
+          <a href="domains.html?tab=pharmacy">Pharmacy</a>
+          <a href="domains.html?tab=agriculture">Agriculture</a>
+          <a href="domains.html?tab=others">Others</a>
+        </div>
+      </div>
+      <a href="about.html">About-Us</a>
+      <a href="careers.html">Careers</a>
+    </nav>
+    <a href="login.html" class="btn nav-cta">My-library</a>
+    <button id="theme-toggle" class="btn-outline" title="Toggle theme" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="domains.html">Programs</a>
+  <a href="about.html">About-Us</a>
+  <a href="careers.html">Careers</a>
+  <a href="contact.html">Contact</a>
+  <a href="login.html" class="m-cta">My-library</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-shapes">
+    <div class="shape s1"></div>
+    <div class="shape s2"></div>
+    <div class="shape s3"></div>
+  </div>
+  <div class="container">
+    <div>
+      <div class="hero-badge"><span>🚀 AI-Powered Learning</span></div>
+      <h1 class="hero-title">
+        LEARN <span class="gradient-text">SMARTER.</span><br/>
+        GROW <span class="gradient-text">FASTER.</span><br/>
+        GET <span class="gradient-text">HIRED.</span>
+      </h1>
+      <p class="hero-sub">At Orvionar Tech, we go beyond teaching — we transform your career with AI-powered programs, expert mentors, and real-world outcomes. Trusted by thousands across India.</p>
+      <div class="hero-btns">
+        <a href="domains.html" class="btn-hero-primary" id="heroBtnDiscover">
+          <span class="btn-hero-icon"><i class="fa-solid fa-rocket"></i></span>
+          <span class="btn-hero-text">Discover Our Programs</span>
+          <span class="btn-hero-shine"></span>
+        </a>
+        <a href="contact.html" class="btn-hero-outline" id="heroBtnAdvisor">
+          <span class="btn-hero-icon"><i class="fa-solid fa-headset"></i></span>
+          <span class="btn-hero-text">Talk to an Advisor</span>
+        </a>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-badge">
+          <i class="fa-solid fa-briefcase"></i>
+          <span>97% of learners achieved job offers or promotions within 3 months.</span>
+        </div>
+      </div>
+    </div>
+    <!-- Right side: Orvionar Logo with glow animation & hiring partner cards -->
+    <div class="hero-logo-right">
+      <div class="hero-logo-ring ring-3"></div>
+      <div class="hero-logo-ring ring-2"></div>
+      <div class="hero-logo-ring ring-1"></div>
+      <div class="hero-logo-glow"></div>
+      <div class="hero-logo-frame">
+        <img src="assets/orvionar-logo.webp" alt="Orvionar Tech" class="hero-logo-img"/>
+      </div>
+      <div class="hero-logo-tag">🏆 INDIA'S #1 AI-POWERED EDTECH</div>
+      
+      <!-- Scrolling marquee of all hiring partner company logos -->
+      <div class="hero-partner-marquee-wrap">
+        <div class="hero-partner-marquee-track">
+          <!-- Set 1: All 20 logos -->
+          <div class="hero-partner-card"><img src="assets/logo-1.webp" alt="Partner 1"></div>
+          <div class="hero-partner-card"><img src="assets/logo-2.webp" alt="Partner 2"></div>
+          <div class="hero-partner-card"><img src="assets/logo-3.webp" alt="Partner 3"></div>
+          <div class="hero-partner-card"><img src="assets/logo-4.webp" alt="Partner 4"></div>
+          <div class="hero-partner-card"><img src="assets/logo-5.webp" alt="Partner 5"></div>
+          <div class="hero-partner-card"><img src="assets/logo-6.webp" alt="Partner 6"></div>
+          <div class="hero-partner-card"><img src="assets/logo-7.webp" alt="Partner 7"></div>
+          <div class="hero-partner-card"><img src="assets/logo-8.webp" alt="Partner 8"></div>
+          <div class="hero-partner-card"><img src="assets/logo-9.webp" alt="Partner 9"></div>
+          <div class="hero-partner-card"><img src="assets/logo-10.webp" alt="Partner 10"></div>
+          <div class="hero-partner-card"><img src="assets/logo-11.webp" alt="Partner 11"></div>
+          <div class="hero-partner-card"><img src="assets/logo-12.webp" alt="Partner 12"></div>
+          <div class="hero-partner-card"><img src="assets/logo-13.webp" alt="Partner 13"></div>
+          <div class="hero-partner-card"><img src="assets/logo-14.webp" alt="Partner 14"></div>
+          <div class="hero-partner-card"><img src="assets/logo-15.webp" alt="Partner 15"></div>
+          <div class="hero-partner-card"><img src="assets/logo-16.webp" alt="Partner 16"></div>
+          <div class="hero-partner-card"><img src="assets/logo-17.webp" alt="Partner 17"></div>
+          <div class="hero-partner-card"><img src="assets/logo-18.webp" alt="Partner 18"></div>
+          <div class="hero-partner-card"><img src="assets/logo-19.webp" alt="Partner 19"></div>
+          <div class="hero-partner-card"><img src="assets/logo-20.webp" alt="Partner 20"></div>
+          <!-- Set 2: Duplicate for seamless infinite loop -->
+          <div class="hero-partner-card"><img src="assets/logo-1.webp" alt="Partner 1"></div>
+          <div class="hero-partner-card"><img src="assets/logo-2.webp" alt="Partner 2"></div>
+          <div class="hero-partner-card"><img src="assets/logo-3.webp" alt="Partner 3"></div>
+          <div class="hero-partner-card"><img src="assets/logo-4.webp" alt="Partner 4"></div>
+          <div class="hero-partner-card"><img src="assets/logo-5.webp" alt="Partner 5"></div>
+          <div class="hero-partner-card"><img src="assets/logo-6.webp" alt="Partner 6"></div>
+          <div class="hero-partner-card"><img src="assets/logo-7.webp" alt="Partner 7"></div>
+          <div class="hero-partner-card"><img src="assets/logo-8.webp" alt="Partner 8"></div>
+          <div class="hero-partner-card"><img src="assets/logo-9.webp" alt="Partner 9"></div>
+          <div class="hero-partner-card"><img src="assets/logo-10.webp" alt="Partner 10"></div>
+          <div class="hero-partner-card"><img src="assets/logo-11.webp" alt="Partner 11"></div>
+          <div class="hero-partner-card"><img src="assets/logo-12.webp" alt="Partner 12"></div>
+          <div class="hero-partner-card"><img src="assets/logo-13.webp" alt="Partner 13"></div>
+          <div class="hero-partner-card"><img src="assets/logo-14.webp" alt="Partner 14"></div>
+          <div class="hero-partner-card"><img src="assets/logo-15.webp" alt="Partner 15"></div>
+          <div class="hero-partner-card"><img src="assets/logo-16.webp" alt="Partner 16"></div>
+          <div class="hero-partner-card"><img src="assets/logo-17.webp" alt="Partner 17"></div>
+          <div class="hero-partner-card"><img src="assets/logo-18.webp" alt="Partner 18"></div>
+          <div class="hero-partner-card"><img src="assets/logo-19.webp" alt="Partner 19"></div>
+          <div class="hero-partner-card"><img src="assets/logo-20.webp" alt="Partner 20"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS STRIP -->
+<section class="stats-strip">
+  <div class="container stats-grid">
+    <div class="stat-item"><span class="stat-num">10,000+</span><span class="stat-label">Learners Trained</span></div>
+    <div class="stat-item"><span class="stat-num">97%</span><span class="stat-label">Placement Rate</span></div>
+    <div class="stat-item"><span class="stat-num">50+</span><span class="stat-label">Expert Mentors</span></div>
+    <div class="stat-item"><span class="stat-num">30+</span><span class="stat-label">Courses Offered</span></div>
+  </div>
+</section>
+
+<!-- PLACEMENT COMPANIES STRIP — infinite marquee -->
+<section class="placement-strip">
+  <div class="placement-strip-label">🎯 Our Students Get Placed At</div>
+  <div class="marquee-track-wrap">
+    <div class="marquee-track">
+      <!-- Set 1 -->
+      <div class="placement-logo"><img src="assets/logo-1.webp"  alt="Company 1"></div>
+      <div class="placement-logo"><img src="assets/logo-2.webp"  alt="Company 2"></div>
+      <div class="placement-logo"><img src="assets/logo-3.webp"  alt="Company 3"></div>
+      <div class="placement-logo"><img src="assets/logo-4.webp"  alt="Company 4"></div>
+      <div class="placement-logo"><img src="assets/logo-5.webp"  alt="Company 5"></div>
+      <div class="placement-logo"><img src="assets/logo-6.webp"  alt="Company 6"></div>
+      <div class="placement-logo"><img src="assets/logo-7.webp"  alt="Company 7"></div>
+      <div class="placement-logo"><img src="assets/logo-8.webp"  alt="Company 8"></div>
+      <div class="placement-logo"><img src="assets/logo-9.webp"  alt="Company 9"></div>
+      <div class="placement-logo"><img src="assets/logo-10.webp" alt="Company 10"></div>
+      <div class="placement-logo"><img src="assets/logo-11.webp" alt="Company 11"></div>
+      <div class="placement-logo"><img src="assets/logo-12.webp" alt="Company 12"></div>
+      <div class="placement-logo"><img src="assets/logo-13.webp" alt="Company 13"></div>
+      <div class="placement-logo"><img src="assets/logo-14.webp" alt="Company 14"></div>
+      <div class="placement-logo"><img src="assets/logo-15.webp" alt="Company 15"></div>
+      <div class="placement-logo"><img src="assets/logo-16.webp" alt="Company 16"></div>
+      <div class="placement-logo"><img src="assets/logo-17.webp" alt="Company 17"></div>
+      <div class="placement-logo"><img src="assets/logo-18.webp" alt="Company 18"></div>
+      <div class="placement-logo"><img src="assets/logo-19.webp" alt="Company 19"></div>
+      <div class="placement-logo"><img src="assets/logo-20.webp" alt="Company 20"></div>
+      <!-- Set 2 — duplicate for seamless loop -->
+      <div class="placement-logo"><img src="assets/logo-1.webp"  alt="Company 1"></div>
+      <div class="placement-logo"><img src="assets/logo-2.webp"  alt="Company 2"></div>
+      <div class="placement-logo"><img src="assets/logo-3.webp"  alt="Company 3"></div>
+      <div class="placement-logo"><img src="assets/logo-4.webp"  alt="Company 4"></div>
+      <div class="placement-logo"><img src="assets/logo-5.webp"  alt="Company 5"></div>
+      <div class="placement-logo"><img src="assets/logo-6.webp"  alt="Company 6"></div>
+      <div class="placement-logo"><img src="assets/logo-7.webp"  alt="Company 7"></div>
+      <div class="placement-logo"><img src="assets/logo-8.webp"  alt="Company 8"></div>
+      <div class="placement-logo"><img src="assets/logo-9.webp"  alt="Company 9"></div>
+      <div class="placement-logo"><img src="assets/logo-10.webp" alt="Company 10"></div>
+      <div class="placement-logo"><img src="assets/logo-11.webp" alt="Company 11"></div>
+      <div class="placement-logo"><img src="assets/logo-12.webp" alt="Company 12"></div>
+      <div class="placement-logo"><img src="assets/logo-13.webp" alt="Company 13"></div>
+      <div class="placement-logo"><img src="assets/logo-14.webp" alt="Company 14"></div>
+      <div class="placement-logo"><img src="assets/logo-15.webp" alt="Company 15"></div>
+      <div class="placement-logo"><img src="assets/logo-16.webp" alt="Company 16"></div>
+      <div class="placement-logo"><img src="assets/logo-17.webp" alt="Company 17"></div>
+      <div class="placement-logo"><img src="assets/logo-18.webp" alt="Company 18"></div>
+      <div class="placement-logo"><img src="assets/logo-19.webp" alt="Company 19"></div>
+      <div class="placement-logo"><img src="assets/logo-20.webp" alt="Company 20"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED COURSES -->
+<section class="section courses-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">What We Offer</p>
+      <h2 class="section-title">TOP COURSES TO LAUNCH YOUR CAREER</h2>
+      <p class="section-sub">Hands-on, industry-aligned programs designed by experts.</p>
+    </div>
+    <div class="courses-grid">
+      <div class="course-card">
+        <div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/mern+Stack.webp')"></div>
+        <div class="course-body">
+          <span class="course-tag">Full Stack</span>
+          <h3>MERN STACK</h3>
+          <p>Build full-stack web apps using MongoDB, Express.js, React & Node.js.</p>
+          <a href="course-detail.html?course=mern" class="btn btn-sm btn-primary">Know More →</a>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/data+science.webp')"></div>
+        <div class="course-body">
+          <span class="course-tag">Data</span>
+          <h3>DATA SCIENCE &AMP; ANALYTICS</h3>
+          <p>Collect, analyze and interpret data to extract meaningful insights.</p>
+          <a href="course-detail.html?course=data-science" class="btn btn-sm btn-primary">Know More →</a>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/gen+AI.webp')"></div>
+        <div class="course-body">
+          <span class="course-tag">AI</span>
+          <h3>GEN-AI &AMP; PROMPT ENGINEERING</h3>
+          <p>Master generative AI and prompt engineering for the modern world.</p>
+          <a href="course-detail.html?course=gen-ai" class="btn btn-sm btn-primary">Know More →</a>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/cyber+security.webp')"></div>
+        <div class="course-body">
+          <span class="course-tag">Security</span>
+          <h3>CYBER SECURITY</h3>
+          <p>Protect systems, master cryptography, ethical hacking & more.</p>
+          <a href="course-detail.html?course=cybersecurity" class="btn btn-sm btn-primary">Know More →</a>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/machine+learning.webp')"></div>
+        <div class="course-body">
+          <span class="course-tag">ML</span>
+          <h3>MACHINE LEARNING</h3>
+          <p>Master Python, data preprocessing, supervised & unsupervised learning.</p>
+          <a href="course-detail.html?course=ml" class="btn btn-sm btn-primary">Know More →</a>
+        </div>
+      </div>
+      <div class="course-card">
+        <div class="course-img" style="background-image:url('https://mystaticimages13.s3.eu-north-1.amazonaws.com/images/cse/azure.webp')"></div>
+        <div class="course-body">
+          <span class="course-tag">Cloud</span>
+          <h3>AZURE CLOUD COMPUTING</h3>
+          <p>Learn Azure services, networking, security and DevOps essentials.</p>
+          <a href="course-detail.html?course=azure" class="btn btn-sm btn-primary">Know More →</a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-40">
+      <a href="domains.html" class="btn btn-outline btn-lg">View All Courses →</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section why-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Why Orvionar</p>
+      <h2 class="section-title">EVERYTHING YOU NEED TO SUCCEED</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-icon"><img src="assets/why-1.webp" alt="Live Interactive Sessions"/></div><h4>Live Interactive Sessions</h4><p>Live, instructor-led classes with real-time doubt resolution and hands-on exercises.</p></div>
+      <div class="why-card"><div class="why-icon"><img src="assets/why-2.webp" alt="Career-Defining Projects"/></div><h4>Career-Defining Projects</h4><p>Work on industry-grade projects that mirror real job responsibilities.</p></div>
+      <div class="why-card"><div class="why-icon"><img src="assets/why-3.webp" alt="Learning Activities"/></div><h4>Structured Learning Activities</h4><p>Interactive quizzes, assignments, and labs designed to reinforce concepts.</p></div>
+      <div class="why-card"><div class="why-icon"><img src="assets/why-4.webp" alt="Doubt Buster Sessions"/></div><h4>Doubt Buster Sessions</h4><p>Expert-led doubt clearing sessions and mentor office hours for instant support.</p></div>
+      <div class="why-card"><div class="why-icon"><img src="assets/why-5.webp" alt="Community Access"/></div><h4>Community & Networking</h4><p>Connect with peers, alumni, and hiring partners through our active community forums.</p></div>
+      <div class="why-card"><div class="why-icon"><img src="assets/why-6.webp" alt="AI-Enhanced LMS"/></div><h4>AI-Enhanced Learning</h4><p>Adaptive learning paths and AI-driven feedback to accelerate progress.</p></div>
+      <div class="why-card"><div class="why-icon"><img src="assets/why-7.webp" alt="Industry Recognised Certification"/></div><h4>Industry-Recognised Certification</h4><p>Receive verified certificates accepted by top employers upon successful completion.</p></div>
+      <div class="why-card"><div class="why-icon"><img src="assets/why-8.webp" alt="Career Support"/></div><h4>Dedicated Career Support</h4><p>Personalised placement assistance, resume reviews, and interview prep.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ALUMNI SUCCESSFUL HUB -->
+<section class="section alumni-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title alumni-title"><span class="gradient-text">Alumni Successful</span> Hub</h2>
+    </div>
+    <div class="alumni-slider-wrapper">
+      <button class="alumni-arrow alumni-prev" id="alumniPrev"><i class="fa-solid fa-chevron-left"></i></button>
+      <div class="alumni-track" id="alumniTrack">
+        <div class="alumni-card">
+          <div class="alumni-avatar"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Sayed" onerror="this.style.display='none'"/></div>
+          <p class="alumni-quote">"The course gave me the tools to ace my promotion interview."</p>
+          <div class="alumni-name-bar"><strong>Sayed</strong><span>Software Developer</span></div>
+        </div>
+        <div class="alumni-card">
+          <div class="alumni-avatar"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Kavya Maguluri" onerror="this.style.display='none'"/></div>
+          <p class="alumni-quote">"Thanks to the mentorship, I transitioned to a higher role."</p>
+          <div class="alumni-name-bar"><strong>Kavya Maguluri</strong><span>Associate Software Engineer</span></div>
+        </div>
+        <div class="alumni-card">
+          <div class="alumni-avatar"><img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Shivam" onerror="this.style.display='none'"/></div>
+          <p class="alumni-quote">"The knowledge helped me earn an appraisal!"</p>
+          <div class="alumni-name-bar"><strong>Shivam</strong><span>Software Engineer</span></div>
+        </div>
+        <div class="alumni-card">
+          <div class="alumni-avatar"><img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Meghana Pade" onerror="this.style.display='none'"/></div>
+          <p class="alumni-quote">"Top-notch content and support. Highly recommend Orvionar!"</p>
+          <div class="alumni-name-bar"><strong>Meghana Pade</strong><span>Software Developer</span></div>
+        </div>
+        <div class="alumni-card">
+          <div class="alumni-avatar"><img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Sunil" onerror="this.style.display='none'"/></div>
+          <p class="alumni-quote">"This course transformed my career completely!"</p>
+          <div class="alumni-name-bar"><strong>Sunil</strong><span>Full Stack Developer</span></div>
+        </div>
+      </div>
+      <button class="alumni-arrow alumni-next" id="alumniNext"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT OUR STUDENTS SAY -->
+<section class="section students-say-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">❤️ WHAT OUR STUDENTS SAY</h2>
+    </div>
+    <div class="students-grid">
+      <div class="student-card">
+        <div class="student-avatar"><img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Meghana Pade" onerror="this.style.display='none'"/></div>
+        <p class="student-quote">"Top-notch content and support."</p>
+        <span class="student-name">– Meghana Pade</span>
+      </div>
+      <div class="student-card">
+        <div class="student-avatar"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Sayed" onerror="this.style.display='none'"/></div>
+        <p class="student-quote">"Helped me switch industries smoothly."</p>
+        <span class="student-name">– Sayed</span>
+      </div>
+      <div class="student-card">
+        <div class="student-avatar"><img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Shivam" onerror="this.style.display='none'"/></div>
+        <p class="student-quote">"Exceeded all my expectations!"</p>
+        <span class="student-name">– Shivam</span>
+      </div>
+      <div class="student-card">
+        <div class="student-avatar"><img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Sunil" onerror="this.style.display='none'"/></div>
+        <p class="student-quote">"This course transformed my career!"</p>
+        <span class="student-name">– Sunil</span>
+      </div>
+    </div>
+    <div class="quote-banner">
+      <p>"You don't have to be great to start, but you have to start to be great."</p>
+      <span>– Zig Ziglar</span>
+    </div>
+  </div>
+</section>
+
+<!-- PLACEMENT BRANDS – All real logos from orvionar.in -->
+<section class="section brands-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Secure Placements At <span class="gradient-text">Top Brands</span></h2>
+    </div>
+    <!-- Row 1 – scrolls right to left -->
+    <div class="brands-row-wrap">
+      <div class="brands-track brands-rtl">
+        <div class="brand-logo"><img src="assets/logo-1.webp"  alt="Company 1"/></div>
+        <div class="brand-logo"><img src="assets/logo-2.webp"  alt="Company 2"/></div>
+        <div class="brand-logo"><img src="assets/logo-3.webp"  alt="Company 3"/></div>
+        <div class="brand-logo"><img src="assets/logo-4.webp"  alt="Company 4"/></div>
+        <div class="brand-logo"><img src="assets/logo-5.webp"  alt="Company 5"/></div>
+        <div class="brand-logo"><img src="assets/logo-6.webp"  alt="Company 6"/></div>
+        <div class="brand-logo"><img src="assets/logo-7.webp"  alt="Company 7"/></div>
+        <div class="brand-logo"><img src="assets/logo-8.webp"  alt="Company 8"/></div>
+        <div class="brand-logo"><img src="assets/logo-9.webp"  alt="Company 9"/></div>
+        <div class="brand-logo"><img src="assets/brand-10.webp" alt="Company 10"/></div>
+        <div class="brand-logo"><img src="assets/logo-10.webp" alt="Company 11"/></div>
+        <!-- duplicate for seamless loop -->
+        <div class="brand-logo"><img src="assets/logo-1.webp"  alt="Company 1"/></div>
+        <div class="brand-logo"><img src="assets/logo-2.webp"  alt="Company 2"/></div>
+        <div class="brand-logo"><img src="assets/logo-3.webp"  alt="Company 3"/></div>
+        <div class="brand-logo"><img src="assets/logo-4.webp"  alt="Company 4"/></div>
+        <div class="brand-logo"><img src="assets/logo-5.webp"  alt="Company 5"/></div>
+        <div class="brand-logo"><img src="assets/logo-6.webp"  alt="Company 6"/></div>
+        <div class="brand-logo"><img src="assets/logo-7.webp"  alt="Company 7"/></div>
+        <div class="brand-logo"><img src="assets/logo-8.webp"  alt="Company 8"/></div>
+        <div class="brand-logo"><img src="assets/logo-9.webp"  alt="Company 9"/></div>
+        <div class="brand-logo"><img src="assets/brand-10.webp" alt="Company 10"/></div>
+        <div class="brand-logo"><img src="assets/logo-10.webp" alt="Company 11"/></div>
+      </div>
+    </div>
+    <!-- Row 2 – scrolls left to right -->
+    <div class="brands-row-wrap" style="margin-top:16px">
+      <div class="brands-track brands-ltr">
+        <div class="brand-logo"><img src="assets/logo-11.webp" alt="Company 12"/></div>
+        <div class="brand-logo"><img src="assets/brand-13.webp" alt="Company 13"/></div>
+        <div class="brand-logo"><img src="assets/logo-12.webp" alt="Company 14"/></div>
+        <div class="brand-logo"><img src="assets/logo-13.webp" alt="Company 15"/></div>
+        <div class="brand-logo"><img src="assets/logo-14.webp" alt="Company 16"/></div>
+        <div class="brand-logo"><img src="assets/logo-15.webp" alt="Company 17"/></div>
+        <div class="brand-logo"><img src="assets/logo-16.webp" alt="Company 18"/></div>
+        <div class="brand-logo"><img src="assets/logo-17.webp" alt="Company 19"/></div>
+        <div class="brand-logo"><img src="assets/logo-18.webp" alt="Company 20"/></div>
+        <div class="brand-logo"><img src="assets/logo-19.webp" alt="Company 21"/></div>
+        <div class="brand-logo"><img src="assets/logo-20.webp" alt="Company 22"/></div>
+        <!-- duplicate for seamless loop -->
+        <div class="brand-logo"><img src="assets/logo-11.webp" alt="Company 12"/></div>
+        <div class="brand-logo"><img src="assets/brand-13.webp" alt="Company 13"/></div>
+        <div class="brand-logo"><img src="assets/logo-12.webp" alt="Company 14"/></div>
+        <div class="brand-logo"><img src="assets/logo-13.webp" alt="Company 15"/></div>
+        <div class="brand-logo"><img src="assets/logo-14.webp" alt="Company 16"/></div>
+        <div class="brand-logo"><img src="assets/logo-15.webp" alt="Company 17"/></div>
+        <div class="brand-logo"><img src="assets/logo-16.webp" alt="Company 18"/></div>
+        <div class="brand-logo"><img src="assets/logo-17.webp" alt="Company 19"/></div>
+        <div class="brand-logo"><img src="assets/logo-18.webp" alt="Company 20"/></div>
+        <div class="brand-logo"><img src="assets/logo-19.webp" alt="Company 21"/></div>
+        <div class="brand-logo"><img src="assets/logo-20.webp" alt="Company 22"/></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="container cta-inner">
+    <h2>READY TO TRANSFORM YOUR CAREER?</h2>
+    <p>Join thousands of learners who've already taken the leap with Orvionar Tech.</p>
+    <div class="cta-btns">
+      <a href="domains.html" class="btn btn-white btn-lg">Explore Courses</a>
+      <a href="https://wa.me/917483905485" target="_blank" class="btn btn-outline-white btn-lg"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+      <img src="assets/orvionar-logo.webp" alt="Orvionar Tech" class="logo-icon-img" style="height:120px;width:auto;object-fit:contain;background-color:white;border-radius:8px;padding:4px;"/>
+    </a>
+      <p>Empowering individuals with cutting-edge skills to thrive in today's competitive world.</p>
+      <div class="social-links">
+        <a href="https://facebook.com/orvionar" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://twitter.com/orvionar" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://instagram.com/orvionar" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/orvionar-tech-private-limited/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="domains.html">Courses</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <ul class="footer-contact">
+        <li><i class="fa-solid fa-envelope"></i><a href="mailto:info@orvionar.in">info@orvionar.in</a></li>
+        <li><i class="fa-solid fa-phone"></i><a href="tel:+917483905485">+91 7483905485</a></li>
+        <li><i class="fa-solid fa-location-dot"></i>Orvionar Tech, H206, 36/5, Hustlehub Tech Park, HSR Layout, Bengaluru – 560102</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>© 2026 Orvionar. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="faq.html">FAQ</a> | <a href="blog.html">Blog</a> | <a href="alumni.html">Alumni</a> | <a href="certificates.html">Certificates</a> | <a href="refund-policy.html">Refund Policy</a> | <a href="terms.html">Terms &amp; Conditions</a> | <a href="privacy.html">Privacy Policy</a>
+        <a href="https://wa.me/917483905485" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-chevron-up"></i></button>
+
+<!-- AI CHATBOT WIDGET -->
+<button id="chatbot-trigger" aria-label="Chat with Orvi AI">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.37 5.07L2 22l4.93-1.37A9.96 9.96 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm-1 14H7v-2h4v2zm6 0h-4v-2h4v2zm0-4H7v-2h10v2z"/></svg>
+  <span class="chatbot-notification">1</span>
+</button>
+
+<div id="chatbot-window">
+  <div class="chatbot-header">
+    <div class="chatbot-avatar"><i class="fa-solid fa-headset" style="color:white; font-size: 1.2rem;"></i></div>
+    <div class="chatbot-header-info">
+      <strong>ORVIONAR AI</strong><br>
+      <span style="margin-top:2px;display:inline-block;">Orvionar Tech Support</span>
+    </div>
+    
+    <button class="chatbot-close" id="chatbot-close"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  
+  <div class="chatbot-messages" id="chatbot-messages"></div>
+  <div class="chatbot-input-area">
+    <input type="text" id="chatbot-input" placeholder="Ask me anything..." autocomplete="off"/>
+    <button id="chatbot-send"><i class="fa-solid fa-paper-plane"></i></button>
+  </div>
+</div>
+
+<a href="https://wa.me/917483905485" class="whatsapp-fab" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>
