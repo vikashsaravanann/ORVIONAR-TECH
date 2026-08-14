@@ -32,14 +32,14 @@
       <a href="dashboard.html" class="nav-mylibrary">My-library</a>
       <a href="about.html">About-Us</a><a href="careers.html">Careers</a>
     </nav>
-    <a href="index.html" class="btn nav-logout" onclick="return confirm('Are you sure you want to logout?')">Logout</a>
+    <a href="#" class="btn nav-logout" id="logoutBtn" onclick="return confirm('Are you sure you want to logout?')">Logout</a>
     <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
   </div>
 </header>
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html">Home</a><a href="domains.html">Programs</a>
   <a href="dashboard.html">My-library</a><a href="about.html">About-Us</a>
-  <a href="careers.html">Careers</a><a href="index.html" class="m-cta">Logout</a>
+  <a href="careers.html">Careers</a><a href="#" id="logoutBtnMobile" class="m-cta">Logout</a>
 </div>
 
 <div class="profile-page" style="padding-top:108px">
@@ -55,15 +55,15 @@
         </div>
         <div class="profile-row">
           <span class="profile-label">Name:</span>
-          <span class="profile-value">VIKASH</span>
+          <span class="profile-value" id="profileName">VIKASH</span>
         </div>
         <div class="profile-row">
           <span class="profile-label">Email:</span>
-          <span class="profile-value">createwithvikash@gmail.com</span>
+          <span class="profile-value" id="profileEmail">createwithvikash@gmail.com</span>
         </div>
         <div class="profile-row">
-          <span class="profile-label">Mobile:</span>
-          <span class="profile-value">+91 9342877474</span>
+          <span class="profile-label">Role:</span>
+          <span class="profile-value" id="profileRole">Student</span>
         </div>
       </div>
       <!-- Academic Details -->
@@ -71,7 +71,7 @@
         <h3>ACADEMIC DETAILS</h3>
         <div class="profile-row">
           <span class="profile-label">College:</span>
-          <span class="profile-value">Rathinam Technical Campus</span>
+          <span class="profile-value" id="profileCollege">Rathinam Technical Campus</span>
         </div>
         <div class="profile-row">
           <span class="profile-label">Subscribed Courses:</span>

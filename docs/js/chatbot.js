@@ -6,7 +6,7 @@
 const OrvionarBot = (() => {
 
   // Connect to our secure backend proxy instead of exposing the GROQ_API_KEY
-  const BACKEND_URL = 'http://localhost:31415/api/chat'; // Change to live URL in production
+  const BACKEND_URL = 'https://orvionar-tech.onrender.com/api/chat'; // Change to live URL in production
 
   /* ---- SYSTEM PROMPT (Company Knowledge Base) ---- */
   const SYSTEM_PROMPT = `You are ORVIONAR AI, the official AI assistant for Orvionar Tech — an AI-powered edtech company based in Bengaluru, India. You must maintain a formal, highly professional, and concise tone at all times. Always respond in 2–4 sentences unless more detail is strictly necessary. Do NOT use emojis under any circumstances.
@@ -94,6 +94,12 @@ RULES:
   }
 
   /* ---- RENDER MESSAGE ---- */
+  function sanitizeHTML(str) {
+    const temp = document.createElement('div');
+    temp.textContent = str;
+    return temp.innerHTML;
+  }
+
   function renderMsg(type, text, chips) {
     const messagesEl = document.getElementById('chatbot-messages');
     if (!messagesEl) return;
@@ -112,7 +118,7 @@ RULES:
     } else {
       div.innerHTML = `
         <div>
-          <div class="msg-bubble">${text}</div>
+          <div class="msg-bubble">${sanitizeHTML(text)}</div>
           <span class="msg-time" style="text-align:right;display:block">${getTime()}</span>
         </div>`;
     }
@@ -140,6 +146,14 @@ RULES:
   /* ---- CALL GROQ API ---- */
   async function callGroq(userMessage) {
     conversationHistory.push({ role: 'user', content: userMessage });
+
+    // Explicit check for GitHub Pages / static hosting without backend
+    if (BACKEND_URL.includes('localhost') && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+      console.error('Chatbot requires backend infrastructure to proxy API calls securely. Falling back to static responses.');
+      // Pop the user message because getFallback doesn't add to history in the same way, or we can just leave it
+      conversationHistory.pop();
+      return getFallback(userMessage);
+    }
 
     try {
       const response = await fetch(BACKEND_URL, {

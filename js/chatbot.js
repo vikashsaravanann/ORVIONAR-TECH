@@ -6,7 +6,7 @@
 const OrvionarBot = (() => {
 
   // Connect to our secure backend proxy instead of exposing the GROQ_API_KEY
-  const BACKEND_URL = 'http://localhost:31415/api/chat'; // Change to live URL in production
+  const BACKEND_URL = 'https://orvionar-tech.onrender.com/api/chat'; // Change to live URL in production
 
   /* ---- SYSTEM PROMPT (Company Knowledge Base) ---- */
   const SYSTEM_PROMPT = `You are ORVIONAR AI, the official AI assistant for Orvionar Tech — an AI-powered edtech company based in Bengaluru, India. You must maintain a formal, highly professional, and concise tone at all times. Always respond in 2–4 sentences unless more detail is strictly necessary. Do NOT use emojis under any circumstances.

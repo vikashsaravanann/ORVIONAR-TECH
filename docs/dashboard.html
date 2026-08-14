@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Security Headers for Static Hosting -->
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block"/>
+  <meta http-equiv="X-Content-Type-Options" content="nosniff"/>
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: https:; font-src 'self' data: https:; connect-src 'self' https:;"/>
+
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>STUDENT DASHBOARD – ORVIONAR TECH</title>
   <link rel="stylesheet" href="css/style.css"/>
@@ -29,7 +35,7 @@
       <a href="about.html">About-Us</a>
       <a href="careers.html">Careers</a>
     </nav>
-    <a href="index.html" class="btn nav-logout" onclick="return confirm('Are you sure you want to logout?')">Logout</a>
+    <a href="#" class="btn nav-logout" id="logoutBtn" onclick="return confirm('Are you sure you want to logout?')">Logout</a>
     <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -37,7 +43,7 @@
   <a href="index.html">Home</a><a href="domains.html">Programs</a>
   <a href="dashboard.html">My-library</a><a href="about.html">About-Us</a>
   <a href="careers.html">Careers</a>
-  <a href="index.html" class="m-cta">Logout</a>
+  <a href="#" id="logoutBtnMobile" class="m-cta">Logout</a>
 </div>
 
 <!-- DASHBOARD CONTENT -->

@@ -11,9 +11,12 @@ import Contact from './models/Contact.js';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 31415;
 
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:31415', 'http://127.0.0.1:31415', 'https://vikashsaravanann.github.io'],
+  credentials: true
+}));
 app.use(express.json());
 
 // Connect to MongoDB
@@ -64,6 +67,34 @@ app.post('/api/auth/login', async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Server error during login' });
+  }
+});
+
+// --- Auth Middleware ---
+const authMiddleware = (req, res, next) => {
+  const token = req.header('Authorization')?.replace('Bearer ', '');
+  if (!token) {
+    return res.status(401).json({ error: 'Access denied. No token provided.' });
+  }
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'orvionar_secure_jwt_secret');
+    req.userId = decoded.userId;
+    next();
+  } catch (ex) {
+    res.status(400).json({ error: 'Invalid token.' });
+  }
+};
+
+app.get('/api/auth/me', authMiddleware, async (req, res) => {
+  try {
+    const user = await User.findById(req.userId).select('-password');
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+    res.json({ user });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Server error fetching profile' });
   }
 });
 

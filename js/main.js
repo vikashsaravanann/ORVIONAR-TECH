@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  const BACKEND_URL = 'http://localhost:31415'; // Change to live URL in production
+  const BACKEND_URL = 'https://orvionar-tech.onrender.com'; // Change to live URL in production
 
   // ---------- Contact form ----------
   // Handled by Formspree SDK directly in contact.html
@@ -199,6 +199,60 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     observer.observe(counter);
   });
+
+  // ---------- Auth & Profile Binding ----------
+  const token = localStorage.getItem('token');
+  const path = window.location.pathname;
+  const isGuardedRoute = path.includes('dashboard.html') || path.includes('profile.html');
+
+  if (isGuardedRoute && !token) {
+    window.location.href = 'login.html';
+  } else if (token) {
+    // If token exists, try fetching profile
+    fetch(`${BACKEND_URL}/api/auth/me`, {
+      headers: { 'Authorization': `Bearer ${token}` }
+    })
+    .then(res => {
+      if (!res.ok) {
+        throw new Error('Invalid token');
+      }
+      return res.json();
+    })
+    .then(data => {
+      const user = data.user;
+      
+      // Bind details to profile.html if active
+      if (path.includes('profile.html')) {
+        const nameEl = document.getElementById('profileName');
+        const emailEl = document.getElementById('profileEmail');
+        const roleEl = document.getElementById('profileRole');
+        const collegeEl = document.getElementById('profileCollege');
+        
+        if (nameEl) nameEl.textContent = user.name;
+        if (emailEl) emailEl.textContent = user.email;
+        if (roleEl) roleEl.textContent = user.role.charAt(0).toUpperCase() + user.role.slice(1);
+        if (collegeEl) collegeEl.textContent = user.college || 'N/A';
+      }
+    })
+    .catch(err => {
+      console.error('Auth error:', err);
+      localStorage.removeItem('token');
+      if (isGuardedRoute) {
+        window.location.href = 'login.html';
+      }
+    });
+  }
+
+  // Logout handler
+  const logoutHandler = (e) => {
+    e.preventDefault();
+    localStorage.removeItem('token');
+    window.location.href = 'login.html';
+  };
+  const logoutBtn = document.getElementById('logoutBtn');
+  const logoutBtnMobile = document.getElementById('logoutBtnMobile');
+  if (logoutBtn) logoutBtn.addEventListener('click', logoutHandler);
+  if (logoutBtnMobile) logoutBtnMobile.addEventListener('click', logoutHandler);
 
 });
 
