@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Security Headers for Static Hosting -->
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block"/>
+  <meta http-equiv="X-Content-Type-Options" content="nosniff"/>
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: https:; font-src 'self' data: https:; connect-src 'self' https:;"/>
+
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>COURSE DETAIL – ORVIONAR TECH</title>
   <link rel="stylesheet" href="css/style.css"/>
@@ -56,6 +62,7 @@
       .hero-content { text-align: center; }
       .hero-actions { justify-content: center; margin-top: 16px; }
     }
+    .section { padding: 60px 0 !important; }
   </style>
 </head>
 <body>
@@ -85,7 +92,7 @@
 </div>
 
 <!-- COURSE HERO -->
-<section class="page-hero" style="padding-top: 180px;">
+<section class="page-hero" style="padding-top: 140px; padding-bottom: 40px;">
   <div class="container hero-split">
     <div class="hero-content">
       <div style="margin-bottom:12px;font-size:0.9rem;font-weight:700;color:var(--orange);letter-spacing:1px;text-transform:uppercase" id="courseDomain"></div>

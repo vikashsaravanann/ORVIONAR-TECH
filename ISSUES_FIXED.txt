@@ -1,0 +1,39 @@
+ISSUES FIXED - ORVIONAR TECH WEBSITE
+====================================
+
+Date: 2024-08-13
+
+FIXES APPLIED:
+✓ Fixed admin-user-access.html - Changed title from "TERMS & CONDITIONS" to "ADMIN USER ACCESS"
+✓ Fixed my-library.html - Changed title from "STUDENT DASHBOARD" to "MY LIBRARY"
+
+FILES MODIFIED:
+- admin-user-access.html (Line 4)
+- my-library.html (Line 4)
+
+REMAINING ISSUES (Not yet fixed):
+
+HIGH PRIORITY:
+1. Missing 8 asset images (need to download from live site):
+   - assets/assets/why-1.webp
+   - assets/assets/why-2.webp
+   - assets/assets/why-3.webp
+   - assets/assets/why-4.webp
+   - assets/assets/why-5.webp
+   - assets/assets/why-6.webp
+   - assets/assets/why-7.webp
+   - assets/assets/why-8.webp
+
+2. Hardcoded image URLs in index.html need to be updated
+
+MEDIUM PRIORITY:
+3. Missing pages (if they exist on live site):
+   - FAQ/Help page
+   - Blog/Resources section
+   - Placement/Alumni page
+   - Refund Policy page
+
+NEXT STEPS:
+- Download the 8 missing asset images
+- Update image URLs from https://www.orvionar.in/assets/ to local paths
+- Check live site for additional pages

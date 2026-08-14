@@ -91,6 +91,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = loginForm.querySelector('input[type=\"email\"]').value;
         const password = loginForm.querySelector('input[type=\"password\"]').value;
         
+        // Explicit check for static hosting without backend
+        if (BACKEND_URL.includes('localhost') && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+          alert('Login system requires a backend service to be deployed (e.g. Node.js on Render/Vercel or Firebase) to handle authentication securely.');
+          throw new Error('Missing backend infrastructure');
+        }
+
         const res = await fetch(`${BACKEND_URL}/api/auth/login`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
