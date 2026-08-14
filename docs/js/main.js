@@ -87,21 +87,26 @@ document.addEventListener('DOMContentLoaded', () => {
   if (loginForm) {
     loginForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      try {
-        const email = loginForm.querySelector('input[type=\"email\"]').value;
-        const password = loginForm.querySelector('input[type=\"password\"]').value;
-        
-        // Explicit check for static hosting without backend
-        if (BACKEND_URL.includes('localhost') && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
-          alert('Login system requires a backend service to be deployed (e.g. Node.js on Render/Vercel or Firebase) to handle authentication securely.');
-          throw new Error('Missing backend infrastructure');
-        }
+      const btn = loginForm.querySelector('button[type="submit"]');
+      const originalText = btn.innerText;
+      btn.innerText = 'Logging in...';
+      btn.disabled = true;
+      
+      const wakeUpTimeout = setTimeout(() => {
+        btn.innerText = 'Waking up server (can take ~2 mins)...';
+      }, 4000);
 
+      try {
+        const email = loginForm.querySelector('input[type="email"]').value;
+        const password = loginForm.querySelector('input[type="password"]').value;
+        
         const res = await fetch(`${BACKEND_URL}/api/auth/login`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, password })
         });
+        
+        clearTimeout(wakeUpTimeout);
         
         if (res.ok) {
           const data = await res.json();
@@ -110,10 +115,15 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
           const errorData = await res.json();
           alert(`Login failed: ${errorData.error}`);
+          btn.innerText = originalText;
+          btn.disabled = false;
         }
       } catch (err) {
+        clearTimeout(wakeUpTimeout);
         console.error(err);
-        alert('Error connecting to the server.');
+        alert('Error connecting to the server. Please check your internet connection or try again later.');
+        btn.innerText = originalText;
+        btn.disabled = false;
       }
     });
   }
@@ -121,18 +131,29 @@ document.addEventListener('DOMContentLoaded', () => {
   if (signupForm) {
     signupForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+      const btn = signupForm.querySelector('button[type="submit"]');
+      const originalText = btn.innerText;
+      btn.innerText = 'Creating account...';
+      btn.disabled = true;
+
+      const wakeUpTimeout = setTimeout(() => {
+        btn.innerText = 'Waking up server (can take ~2 mins)...';
+      }, 4000);
+
       try {
-        const name = signupForm.querySelector('input[type=\"text\"]').value;
-        const email = signupForm.querySelector('input[type=\"email\"]').value;
-        const password = signupForm.querySelector('input[type=\"password\"]').value;
-        const phone = signupForm.querySelector('input[type=\"tel\"]')?.value || '';
-        const college = signupForm.querySelectorAll('input[type=\"text\"]')[1]?.value || '';
+        const name = signupForm.querySelector('input[type="text"]').value;
+        const email = signupForm.querySelector('input[type="email"]').value;
+        const password = signupForm.querySelector('input[type="password"]').value;
+        const phone = signupForm.querySelector('input[type="tel"]')?.value || '';
+        const college = signupForm.querySelectorAll('input[type="text"]')[1]?.value || '';
 
         const res = await fetch(`${BACKEND_URL}/api/auth/signup`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ name, email, password, phone, college })
         });
+        
+        clearTimeout(wakeUpTimeout);
 
         if (res.ok) {
           const success = document.getElementById('signupSuccess');
@@ -141,10 +162,15 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
           const errorData = await res.json();
           alert(`Signup failed: ${errorData.error}`);
+          btn.innerText = originalText;
+          btn.disabled = false;
         }
       } catch (err) {
+        clearTimeout(wakeUpTimeout);
         console.error(err);
-        alert('Error connecting to the server.');
+        alert('Error connecting to the server. Please try again later.');
+        btn.innerText = originalText;
+        btn.disabled = false;
       }
     });
   }
